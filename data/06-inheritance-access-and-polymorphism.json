@@ -1,0 +1,1309 @@
+{
+  "topics": [
+    {
+      "id": "inheritance",
+      "title": "Inheritance",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "in Java"
+        },
+        {
+          "type": "command",
+          "text": "Object-Oriented Programming (OOP)"
+        },
+        {
+          "type": "text",
+          "text": "When discussing Object-Oriented Programming (OOP), concepts like classes, objects, and encapsulation are fundamental. One of the most important concepts within OOP is inheritance. The Need for Inheritance"
+        },
+        {
+          "type": "heading",
+          "text": "Understanding \"Is-A\" and \"Has-A\" Relationships"
+        },
+        {
+          "type": "heading",
+          "text": "Has-A Relationship"
+        },
+        {
+          "type": "text",
+          "text": "Consider a computer as an abstract concept. It could be a laptop, desktop, or mobile device—it's not specific, just a hardware device. When discussing a desktop, for example, we might say that the desktop has hardware, has a keyboard, and has a mouse. These relationships describe composition, where an object contains other objects."
+        },
+        {
+          "type": "heading",
+          "text": "Is-A Relationship"
+        },
+        {
+          "type": "text",
+          "text": "Now, take the example of a Toyota Fortuner, a popular car in India. When referring to it, we say \"Fortuner is a Car.\" The phrase \"is a\" emphasizes the relationship of inheritance. Here, the Fortuner inherits the general characteristics of a car but also includes specific features that distinguish it from other cars."
+        },
+        {
+          "type": "text",
+          "text": "Real-World Example of Inheritance In Java, inheritance is a mechanism where one class can inherit properties and methods from another class. Let’s consider the example of a calculator"
+        },
+        {
+          "type": "command",
+          "text": "Basic Calculator (Calc)"
+        },
+        {
+          "type": "text",
+          "text": "This class might include variables and methods for basic operations like addition, subtraction, and division."
+        },
+        {
+          "type": "command",
+          "text": "Advanced Calculator (AdvCalc)"
+        },
+        {
+          "type": "text",
+          "text": "This class represents a scientific calculator with advanced features, in addition to the basic operations."
+        },
+        {
+          "type": "heading",
+          "text": "Inheritance Relationship"
+        },
+        {
+          "type": "list",
+          "items": [
+            "AdvCalc inherits from Calc. This means AdvCalc can use the properties and methods of Calc and add its own specialized features. Key Terms in Inheritance"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Parent Class / Superclass / Base Class"
+        },
+        {
+          "type": "text",
+          "text": "The class from which properties and methods are inherited. In this example, Calc is the parent class."
+        },
+        {
+          "type": "heading",
+          "text": "Child Class / Subclass / Derived Class"
+        },
+        {
+          "type": "text",
+          "text": "The class that inherits from another class. Here, AdvCalc is the child class."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Inheritance and the extends Keyword in Java",
+            "In Java, inheritance is implemented using the extends keyword. This keyword allows one class (the child class or subclass) to inherit the properties and methods of another class (the parent class or superclass)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Syntax"
+        },
+        {
+          "type": "text",
+          "text": "What is Inheritance? Inheritance in Java is a mechanism by which one class (called a child or subclass) can inherit the properties and behaviours (fields and methods) of another class (called a parent or superclass). This is a fundamental concept in Object-Oriented Programming (OOP), allowing for the creation of new classes based on existing ones."
+        },
+        {
+          "type": "text",
+          "text": "It promotes reusability and can help reduce redundancy in your code."
+        },
+        {
+          "type": "heading",
+          "text": "By using inheritance, you can"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Reuse existing code from parent classes.",
+            "Add or modify functionalities in child classes.",
+            "Maintain a clear and organized structure in your codebase. Key Concepts in Inheritance"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "1. Class"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A blueprint from which individual objects are created. It defines a group of objects with common properties."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. Subclass/Child Class"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A class that inherits the properties and methods from another class. It is also known as a derived class, extended class, or child class."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Superclass/Parent Class"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The class from which a subclass inherits properties and methods. It is also referred to as a base class or parent class."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "4. Reusability"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The concept of reusing fields and methods of an existing class when creating a new class. This is one of the primary benefits of inheritance, allowing for more efficient and maintainable code."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Syntax of Java Inheritance"
+        },
+        {
+          "type": "heading",
+          "text": "Example: Simple Calculator"
+        },
+        {
+          "type": "text",
+          "text": "Let's start with a simple calculator class that performs basic arithmetic operations like addition and subtraction"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "This example demonstrates a simple calculator that performs addition and subtraction. The Calc class contains two methods: add and sub. The Demo class creates an instance of Calc and uses it to perform the operations. Extending the Calculator: Advanced Calculator Suppose you need a calculator with advanced features like multiplication and division. You have two options"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Add more methods to the Calc class.",
+            "Create a new class (AdvCalc) that extends Calc and adds the extra features. Option 2 is more feasible as it avoids code redundancy and keeps the code organized."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "In this example, the AdvCalc class extends the Calc class. It inherits the add and sub methods and introduces two new methods: mul (for multiplication) and div (for division). This demonstrates the power of inheritance, where the AdvCalc class can reuse the existing methods from Calc while adding its own functionalities."
+        },
+        {
+          "type": "text",
+          "text": "Introduction: In object-oriented programming, inheritance allows a class to inherit properties and methods from another class. However, Java does not support multiple inheritance for classes, meaning a class cannot inherit from more than one class. This is a key difference from other languages like C++, where multiple inheritance is allowed."
+        },
+        {
+          "type": "heading",
+          "text": "Why Multiple Inheritance is Not Allowed in Java"
+        },
+        {
+          "type": "text",
+          "text": "Consider a scenario where class C inherits from two classes, A and B. If both A and B contain a method with the same name, it creates ambiguity: the compiler cannot determine whether to use the method from A or B. This issue is known as the Diamond Problem or Ambiguity Problem. To avoid this problem and reduce complexity, Java does not support multiple inheritance for classes."
+        },
+        {
+          "type": "text",
+          "text": "Instead, Java promotes code simplicity and consistency by disallowing it, resulting in compile-time errors rather than runtime issues."
+        },
+        {
+          "type": "heading",
+          "text": "Key Points"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Diamond Problem: When a class inherits from two classes that have methods with the same name, the compiler faces ambiguity, leading to confusion about which method to inherit.",
+            "Compile-Time Error: Java throws a compile-time error if a class attempts to inherit from more than one class, preventing potential ambiguity and runtime errors.",
+            "Simplification: Java's decision to disallow multiple inheritance simplifies the language and reduces the chances of errors."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example of Multiple Inheritance in Java"
+        },
+        {
+          "type": "heading",
+          "text": "Error Message"
+        },
+        {
+          "type": "text",
+          "text": "In this example, class C attempts to inherit from both A and B. However, this is not allowed in Java, and the code will result in a compile-time error. If you try to compile this code in an IDE, you'll see a warning or error indicating that multiple inheritance is not supported."
+        }
+      ],
+      "pages": "142-149"
+    },
+    {
+      "id": "single-and-multilevel-inheritance",
+      "title": "Single and Multilevel Inheritance",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Single and Multilevel Inheritance in Java Inheritance is a powerful concept in Java that allows one class to inherit the properties and behaviors of another class. This concept is fundamental in Object-Oriented Programming (OOP) and helps in creating a hierarchical structure for classes."
+        },
+        {
+          "type": "text",
+          "text": "Single Inheritance Definition: Single inheritance occurs when a class (child class) inherits from only one parent class. This allows the child class to access the fields and methods of the parent class."
+        },
+        {
+          "type": "heading",
+          "text": "Example: Let's look at a simple example of single inheritance"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "This example demonstrates how AdvCalc, the child class, inherits basic arithmetic operations from Calc, the parent class. AdvCalc adds its own methods (multi and div) while reusing the methods from Calc (add and sub). This approach prevents code duplication and makes the code easier to maintain and extend."
+        },
+        {
+          "type": "text",
+          "text": "Multilevel Inheritance Definition: Multilevel inheritance is a scenario where a class inherits from a child class, making a chain of inheritance. This allows a subclass to inherit properties and methods from more than one level of parent classes. Example: Consider the following example to understand multilevel inheritance:"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "In this example, VeryAdvCalc inherits from AdvCalc, which in turn inherits from Calc. This creates a multilevel inheritance structure. VeryAdvCalc has access to methods from both its parent (AdvCalc) and grandparent (Calc) classes, along with its own method power."
+        }
+      ],
+      "pages": "150-153"
+    },
+    {
+      "id": "this-and-super-methods",
+      "title": "this and super Methods",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "in Java In Java, the super() and this() keywords are crucial for managing constructor invocation and establishing relationships between classes. Understanding how to use these keywords effectively is vital for mastering object-oriented programming in Java. this Keyword The this keyword is a reserved keyword in Java that refers to the current instance of a class."
+        },
+        {
+          "type": "text",
+          "text": "It is primarily used for calling one constructor from another within the same class. Here are some contexts where this can be used"
+        },
+        {
+          "type": "list",
+          "items": [
+            "To invoke the current class constructor: This is commonly used when you want to call one constructor from another within the same class.",
+            "To pass the current class instance as an argument: this can be passed as an argument in method or constructor calls."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "Consider a scenario where class B has both a default constructor and a parameterized constructor. If you want both constructors to be executed when the parameterized constructor is called, you can use the this keyword to call the default constructor from the parameterized one."
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "super Keyword The super keyword is another reserved keyword in Java, used to refer to the superclass"
+        },
+        {
+          "type": "heading",
+          "text": "(parent class) of the current object. It has several important uses"
+        },
+        {
+          "type": "list",
+          "items": [
+            "To call superclass constructors: super() is often used to call a superclass constructor from a subclass. If a superclass has a parameterized constructor, you can call it explicitly using super().",
+            "To refer to superclass members: super can also be used to refer to fields, methods, or constructors of the superclass, which is particularly useful when the subclass has members with the same names as those in the superclass."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "In the above example, when an object of class B is created, the constructor of A is called first, followed by the constructor of B. This happens because the super() keyword, which calls the parent class constructor, is implicitly included in every constructor. Important Points to Remember"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Implicit super(): Every constructor in Java implicitly contains a call to super() unless you explicitly call another constructor using this(). This ensures that the parent class constructor is always invoked before the subclass constructor.",
+            "this() vs. super(): Both this() and super() must be the first statement in a constructor. You cannot use both in the same constructor, as they would conflict in terms of order."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The Object Class"
+        },
+        {
+          "type": "list",
+          "items": [
+            "In Java, all classes implicitly inherit from the Object class if they don't explicitly extend another class. This makes Object the root of the class hierarchy.",
+            "When a class like A is extended by class B, A itself extends the Object class. This means that B also indirectly inherits from Object. Therefore, every class in Java, either directly or indirectly, inherits from the Object class.",
+            "No Multiple Inheritance: Java does not support multiple inheritance for classes, which avoids complexity and ambiguity, especially with the super keyword. However,"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Java supports multilevel inheritance, where super is still relevant."
+        },
+        {
+          "type": "heading",
+          "text": "Example of Error with this() and super() Together"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Compile Error: \"call to this must be first statement in constructor\" Commonly Asked Questions"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Can we use both this() and super() in the same constructor?",
+            "No, in Java, either this() or super() must be the first statement in a constructor. You cannot use both together, as it would create a conflict, leading to a compile-time error.",
+            "What happens if super() is not explicitly mentioned in a constructor?",
+            "If super() is not explicitly mentioned, Java implicitly calls the default constructor of the superclass."
+          ]
+        }
+      ],
+      "pages": "154-158"
+    },
+    {
+      "id": "access-modifiers",
+      "title": "Access Modifiers",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "in Java are keywords that define the accessibility or scope of variables, methods, constructors, and classes. They play a crucial role in encapsulating data, ensuring security, and maintaining control over how different parts of your code interact with each other."
+        },
+        {
+          "type": "text",
+          "text": "By using access modifiers, developers can specify which parts of a program can access and modify certain data, thereby protecting sensitive information and preventing unintended interactions. 1. Private: It is only accessible within the class in which it is declared."
+        },
+        {
+          "type": "text",
+          "text": "2. Default: The default setting is accessible within the package and is applied when no other modifier is specified. 3. Protected: accessible within the package and by subclasses outside the package. 4. Public: The public access modifier is accessible from anywhere within the program."
+        },
+        {
+          "type": "heading",
+          "text": "Examples of Each Access Modifier"
+        },
+        {
+          "type": "text",
+          "text": "Let's illustrate each access modifier using simple examples in a scenario where we have a package named \"other\" and a few classes outside of it. Let's go through the examples for each access modifier and display the expected output or error messages. Private Access Modifier Example"
+        },
+        {
+          "type": "heading",
+          "text": "Class A in other package"
+        },
+        {
+          "type": "text",
+          "text": "package other; public class A { private int marks = 6; private void displayMarks() { System.out.println(\"Marks: \" + marks); } public void show() { displayMarks(); } }"
+        },
+        {
+          "type": "heading",
+          "text": "Class Demo outside ‘other’ package"
+        },
+        {
+          "type": "text",
+          "text": "public class Demo { public static void main(String[] args) { other.A obj = new other.A(); // System.out.println(obj.marks); // Error: marks has private access in A // obj.displayMarks(); // Error: displayMarks() has private access in A obj.show(); // This will work }}"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Marks: 6"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "The private variable marks and the private method displayMarks are not accessible directly outside the class A. However, within class A, the public method show() allows access to them, resulting in the output being displayed. Default Access Modifier Example"
+        },
+        {
+          "type": "heading",
+          "text": "Class A in other package"
+        },
+        {
+          "type": "command",
+          "text": "package other; public class A { int marks = 6; void displayMarks() { System.out.println(\"Marks: \" + marks); } }"
+        },
+        {
+          "type": "heading",
+          "text": "Class B in the same other package"
+        },
+        {
+          "type": "command",
+          "text": "package other; public class B { public static void main(String[] args) { A obj = new A(); System.out.println(obj.marks); obj.displayMarks(); } }"
+        },
+        {
+          "type": "heading",
+          "text": "Class Demo outside other package"
+        },
+        {
+          "type": "text",
+          "text": "public class Demo { public static void main(String[] args) { other.A obj = new other.A(); // System.out.println(obj.marks); // Error: marks is not public in A; cannot be accessed from outside package // obj.displayMarks(); // Error: displayMarks() is not public in A; cannot be accessed from outside package } }"
+        },
+        {
+          "type": "heading",
+          "text": "Output (for B class in the same package)"
+        },
+        {
+          "type": "text",
+          "text": "Marks: 6"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "Class A and Class B are both in the same package (`other`), so `marks` and `displayMarks()` in `Class A` can be accessed directly in `Class B` because they have default access. Class Demo is in a different package."
+        },
+        {
+          "type": "text",
+          "text": "The code shows that when trying to access `marks` and `displayMarks()` from `Class A` in `Class Demo`, it results in a compilation error because default members are not accessible outside their package. Protected Access Modifier Example"
+        },
+        {
+          "type": "heading",
+          "text": "Class A in other package"
+        },
+        {
+          "type": "command",
+          "text": "package other; public class A { protected int marks = 6; protected void displayMarks() { System.out.println(\"Marks: \" + marks); }}"
+        },
+        {
+          "type": "heading",
+          "text": "Class C in otherPackage (different package but subclass)"
+        },
+        {
+          "type": "text",
+          "text": "package otherPackage; import other.A; public class C extends A { public void showMarks() { System.out.println(marks); // Accessible in subclass outside the package displayMarks(); // Accessible in subclass outside the package } }"
+        },
+        {
+          "type": "heading",
+          "text": "Class Demo outside other package"
+        },
+        {
+          "type": "text",
+          "text": "public class Demo { public static void main(String[] args) { otherPackage.C obj = new otherPackage.C(); obj.showMarks(); // This will work A obj2 = new A(); // System.out.println(obj2.marks); // Error: marks has protected access in A // obj2.displayMarks(); // Error: displayMarks() has protected access in A } }"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Marks: 6 Marks: 6"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "The protected members (marks and displayMarks) are accessible within the same package and by subclasses outside the package. In this case, C extends A and can access protected members. However, Demo cannot access them directly. Public Access Modifier Example"
+        },
+        {
+          "type": "heading",
+          "text": "Class A in other package"
+        },
+        {
+          "type": "command",
+          "text": "package other; public class A { public int marks = 6; public void displayMarks() { System.out.println(\"Marks: \" + marks); } }"
+        },
+        {
+          "type": "heading",
+          "text": "Class Demo outside other package"
+        },
+        {
+          "type": "text",
+          "text": "public class Demo { public static void main(String[] args) { other.A obj = new other.A(); System.out.println(obj.marks); // Accessible everywhere obj.displayMarks(); // Accessible everywhere } }"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Marks: 6 Marks: 6"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "The public members (marks and displayMarks) are accessible from anywhere in the program, regardless of the package."
+        },
+        {
+          "type": "heading",
+          "text": "Key Points"
+        },
+        {
+          "type": "text",
+          "text": "Private: Only accessible within the same class. Not accessible from any other class. Default (Package-Private): accessible within the same package. Not accessible from other packages. Protected: accessible within the same package and by subclasses outside the package. Public: accessible everywhere, across all packages."
+        },
+        {
+          "type": "heading",
+          "text": "Access Modifiers Table"
+        },
+        {
+          "type": "text",
+          "text": "Modifier Same Class Same Package Subclass Same Package Non-Subclass Different Package Subclass Different Package Non-Subclass Private Yes No No No No Default Yes Yes Yes No No Protected Yes Yes Yes Yes No Public Yes Yes Yes Yes Yes"
+        },
+        {
+          "type": "heading",
+          "text": "FAQs on Access Modifiers"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "What are access modifiers in Java? Access modifiers are keywords that control the visibility and accessibility of classes, methods, and variables in Java.",
+            "Can a private method be overridden? No, private methods cannot be overridden as they are not accessible outside their class.",
+            "What is the difference between protected and default access? Protected access allows visibility within the package and to subclasses, while default access restricts visibility only within the package.",
+            "Can we have a private constructor in Java?"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Yes, a private constructor can be used to prevent the instantiation of a class from outside."
+        }
+      ],
+      "pages": "159-165"
+    },
+    {
+      "id": "dynamic-method-dispatch",
+      "title": "Dynamic Method Dispatch",
+      "summary": "",
+      "code": {
+        "filename": "DynamicMethodDispatch.java",
+        "language": "java",
+        "text": "A obj = new A();\nobj = new B();\nobj = new C();"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Runtime Polymorphism in Java"
+        },
+        {
+          "type": "heading",
+          "text": "Definition"
+        },
+        {
+          "type": "text",
+          "text": "Runtime polymorphism, also known as Dynamic Method Dispatch, is a process where a call to an overridden method is resolved at runtime rather than compile-time. This mechanism allows Java to determine which method implementation to invoke based on the actual object type, rather than the reference type."
+        },
+        {
+          "type": "heading",
+          "text": "How It Works"
+        },
+        {
+          "type": "text",
+          "text": "In dynamic method dispatch, an overridden method is called through the reference variable of a superclass. The method that gets executed is determined by the object that the reference variable points to at runtime. Simplified Example Here’s a simpler way to achieve the same output i.e. same runtime object and type of object reference"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Here's an example to demonstrate dynamic method dispatch"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "Initially, obj is a reference to an object of type A. The show() method from class A is invoked. Later, same obj is assigned a new object of type B. Now, the show() method of class B is invoked, demonstrating dynamic method dispatch. Example that demonstrates how the same reference of type A can invoke methods from classes B, and C based on the object it points to at runtime"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "heading",
+          "text": "1. Reference of Type A Pointing to an Object of Type A"
+        },
+        {
+          "type": "text",
+          "text": "A obj = new A(); obj.show(); // Output: In A's Show"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Here, obj is both a reference of type A and an object of type A. The show() method from class A is invoked, so the output is \"In A's Show\"."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. Reference of Type A Pointing to an Object of Type B"
+        },
+        {
+          "type": "text",
+          "text": "obj = new B(); obj.show(); // Output: In B's Show"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The same reference obj is now assigned an object of type B. The show() method from class B is invoked, demonstrating dynamic method dispatch. The output is \"In B's Show\"."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Reference of Type A Pointing to an Object of Type C"
+        },
+        {
+          "type": "text",
+          "text": "obj = new C(); obj.show(); // Output: In C's Show"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Finally, the reference obj is assigned an object of type C. The show() method from class C is invoked, and the output is \"In C's Show\"."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Key Points"
+        },
+        {
+          "type": "text",
+          "text": "Dynamic Method Dispatch: The method that gets executed is determined by the actual object type at runtime, even though the reference type remains the same (A in this case)."
+        },
+        {
+          "type": "text",
+          "text": "Polymorphism: This example illustrates the concept of polymorphism in Java, where a single reference type can point to objects of different classes, and the method calls are resolved based on the actual object type."
+        },
+        {
+          "type": "heading",
+          "text": "Advantages of Dynamic Method Dispatch"
+        },
+        {
+          "type": "text",
+          "text": "Supports Method Overriding: Allows Java to support overriding of methods, which is essential for runtime polymorphism. Flexibility: A class can define common methods that will be used by all its subclasses, while subclasses can provide specific implementations of those methods."
+        },
+        {
+          "type": "text",
+          "text": "Enhanced Functionality: Subclasses can add specific methods, enhancing the functionality of the superclass."
+        }
+      ],
+      "pages": "166-170"
+    },
+    {
+      "id": "method-overriding",
+      "title": "Method Overriding",
+      "summary": "",
+      "code": {
+        "filename": "MethodOverriding.java",
+        "language": "java",
+        "text": "class A {\n// Method in the parent class\npublic void show() {\nSystem.out.println(\"in A show\");\n}\n}\nclass B extends A {\n// Overridden method in the child class\npublic void show() {\nSystem.out.println(\"in B show\");\n}\n}\npublic class Demo {\npublic static void main(String[] args) {\nB obj = new B(); // Creating an object of subclass B\n// Output:\n// in B show\n}\n}\n@Override\npublic void show() {\nSystem.out.println(\"in B show\");\n}\nclass B extends A {\n@Override\npublic void show() {\nSystem.out.println(\"in B show\");\n}\n}"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "in Java Definition: Method overriding in Java occurs when a subclass (or child class) provides a specific implementation of a method that is already defined in its superclass (or parent class). The method in the subclass must have the same name, parameters (or signature), and return type (or a subtype) as the method in the superclass."
+        },
+        {
+          "type": "text",
+          "text": "When this happens, the method in the subclass overrides the method in the superclass."
+        },
+        {
+          "type": "heading",
+          "text": "Key Points"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Run-Time Polymorphism: Method overriding is a key feature that allows Java to achieve run-time polymorphism. The version of the method that gets executed is determined by the object that is used to invoke it, not by the type of reference variable.",
+            "Inheritance: Method overriding is closely related to inheritance, as it allows subclasses to modify or extend the behavior of methods inherited from their parent classes."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example of Method Overriding"
+        },
+        {
+          "type": "text",
+          "text": "class A { // Method in the parent class public void show() { System.out.println(\"in A show\"); } } class B extends A { // Overridden method in the child class public void show() { System.out.println(\"in B show\"); } } public class Demo { public static void main(String[] args) { B obj = new B(); // Creating an object of subclass B obj.show(); // This will call the show() method in class B"
+        },
+        {
+          "type": "heading",
+          "text": "// Output"
+        },
+        {
+          "type": "command",
+          "text": "// in B show } }"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "In this example, class A defines a method show(). Class B, which extends class A, overrides the show() method by providing its implementation.",
+            "When an object of class B is created and its show() method is called, the overridden method in class B is executed, displaying \"in B show\".",
+            "If class B had not provided its implementation of show(), calling obj.show() would have executed the method from class A, displaying \"in A show\"."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Importance of @Override Annotation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "When overriding a method, it is a good practice to use the @Override annotation above the method. This explicitly tells the compiler that you intend to override a method from the superclass, and the compiler will generate an error if you accidentally do not match the method signature correctly. @Override public void show() { System.out.println(\"in B show\"); }"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "How Method Overriding Works"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dynamic Method Dispatch: During runtime, the JVM determines which method to execute based on the actual object being referred to, not the reference type. This mechanism is called dynamic method dispatch.",
+            "Super Keyword: If you need to call the overridden method from the superclass within the subclass, you can use the super keyword. class B extends A { @Override public void show() { super.show(); // Calls the show() method from class A System.out.println(\"in B show\"); } }"
+          ]
+        }
+      ],
+      "pages": "171-173"
+    },
+    {
+      "id": "packages",
+      "title": "Packages",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A package in Java is a mechanism to encapsulate a group of classes, sub-packages, and interfaces. It acts as a container for related classes and interfaces, allowing some to be exposed for external use while others are kept internal. Packages facilitate code reuse, prevent naming conflicts, and organize classes in a logical manner."
+        },
+        {
+          "type": "text",
+          "text": "Key Uses of Packages In Java, a package serves as a namespace that organizes classes, interfaces, and sub-packages. One of the primary advantages of using packages is their ability to prevent naming conflicts or collisions. This is especially important in large projects where multiple developers might create classes with the same name, but for different purposes. Understanding Naming Conflicts Imagine a scenario where you're developing a software application for a college. Different departments like Computer Science (CSE) and Electrical Engineering (EE) have their own staff management systems. Both departments need an Employee class to manage their respective employees. Without packages, having two Employee classes in the same project would lead to a conflict because the Java compiler wouldn't know which Employee class you are referring to when you try to use it. How Packages Prevent Naming Conflicts Java packages provide a unique namespace for classes, which allows you to have multiple classes with the same name in different packages. By placing classes in different packages, you can avoid naming conflicts while still organizing your code logically."
+        },
+        {
+          "type": "heading",
+          "text": "For example"
+        },
+        {
+          "type": "text",
+          "text": "Package 1: college.staff.cse.Employee Package 2: college.staff.ee.Employee In this scenario, both departments can have their own Employee class because they are stored in different packages. Here’s a detailed breakdown college.staff.cse.Employee"
+        },
+        {
+          "type": "text",
+          "text": "This class belongs to the Computer Science Engineering (CSE) department. The package name college.staff.cse acts as a unique identifier or namespace for this Employee class. You can have fields and methods specific to CSE department employees."
+        },
+        {
+          "type": "text",
+          "text": "college.staff.ee.Employee"
+        },
+        {
+          "type": "text",
+          "text": "This class belongs to the Electrical Engineering (EE) department. The package name college.staff.ee acts as a different namespace, ensuring that this Employee class does not conflict with the one in the CSE package. It can have different fields and methods tailored to the needs of EE department employees."
+        },
+        {
+          "type": "text",
+          "text": "Organizing Classes and Interfaces: Packages make it easier to locate and use related classes and interfaces. Types of Packages 1. Built-in Packages: These packages are part of the Java API and provide essential classes for various functionalities. java.lang: Contains fundamental classes, including those for primitive data types and string operations. It is automatically imported. java.io: Provides classes for input/output operations. java.util: Includes utility classes for data structures like LinkedList and support for date/time operations. java.net: Provides classes for networking operations. 2. User-defined Packages: These are packages created by the user to organize and manage their own classes. Accessing Packages from Another Package"
+        },
+        {
+          "type": "heading",
+          "text": "There are three ways to access classes from a different package"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Import the entire package: import package.*;",
+            "Import specific class: import package.classname;",
+            "Fully qualified name: Use the complete path to the class, package.classname."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "Suppose we have two classes, Calc and AdvancedCalc, and we want to place them in a package named tools. To use these classes in our main class, we would:"
+        },
+        {
+          "type": "heading",
+          "text": "1. Define the package in the class files"
+        },
+        {
+          "type": "command",
+          "text": "package tools;"
+        },
+        {
+          "type": "heading",
+          "text": "2. Import the package and classes in the main class"
+        },
+        {
+          "type": "text",
+          "text": "import tools.Calc; import tools.AdvancedCalc; Java's standard library also uses packages. For example, the Object class is stored in the java.lang package. Even though we don't explicitly import java.lang.Object, it is available by default (java.lang.*)."
+        },
+        {
+          "type": "text",
+          "text": "Significance of Using * in Packages In Java, when you're working with packages, you often need to import classes from other packages to use them in your code. Instead of importing each class individually, you can use the * symbol to import all the classes in a package at once. This is especially useful when you're working with multiple classes in a single package. Simple Example Let's say you have a package called shapes, which contains different classes like Circle, Square, and Rectangle. package shapes; public class Circle { // Circle-related code } public class Square { // Square-related code } public class Rectangle { // Rectangle-related code } Now, if you're writing a program in a different package, and you need to use all these shapes, you can import each class individually import shapes.Circle; import shapes.Square; import shapes.Rectangle; Or, you can simply use the * symbol to import all the classes in the shapes package at once: import shapes.*; This means, instead of writing three separate import statements, you only need one. Important Note While import *; can save time, it's also important to use it wisely. If a package has many classes and you only need a few, it's better to import those specific classes. This makes your code clearer and can help avoid conflicts if there are classes with the same name in different packages. Summary: Using * in imports allows you to bring in all classes from a package with a single statement, making your code cleaner and easier to manage when dealing with multiple classes from the same package. However, it should be used judiciously to maintain clarity and avoid potential naming conflicts. Publishing and Using Packages Packages are useful when you have multiple files in a project. You can bundle these packages and share them as libraries over as JAR or WAR file over the internet. For example, database driver classes are provided in specific packages, which can be imported and used in projects to enable database connectivity."
+        }
+      ],
+      "pages": "174-177"
+    },
+    {
+      "id": "polymorphism",
+      "title": "Polymorphism",
+      "summary": "",
+      "code": {
+        "filename": "Polymorphism.java",
+        "language": "java",
+        "text": "public class Calculator {\n// Overloaded method with two parameters\npublic int add(int a, int b) {\nreturn a + b;\n}\n// Overloaded method with three parameters\npublic int add(int a, int b, int c) {\nreturn a + b + c;\n}\n}\nclass Animal {\n// Method in the parent class\npublic void sound() {\nSystem.out.println(\"Animal makes a sound\");\n}\n}\nclass Dog extends Animal {\n// Overriding the sound method in the subclass\n@Override\npublic void sound() {\nSystem.out.println(\"Dog barks\");\n}\n}\npublic class Main {\npublic static void main(String[] args) {\nAnimal myDog = new Dog(); // Runtime Polymorphism\n}\n}"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Polymorphism in Java Definition: Polymorphism in Java is the ability of an object to take on many forms. The term \"polymorphism\" is derived from two Greek words: poly, meaning \"many,\" and morphism, meaning \"forms\" or \"behaviors.\" Polymorphism allows objects to be treated as instances of their parent class while still allowing them to execute methods in a child-specific way."
+        },
+        {
+          "type": "heading",
+          "text": "Types of Polymorphism"
+        },
+        {
+          "type": "heading",
+          "text": "1. Compile-time polymorphism (static polymorphism)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "In this type, the method behavior is determined at compile-time. This is achieved through method overloading."
+          ]
+        },
+        {
+          "type": "command",
+          "text": "2. Runtime Polymorphism (Dynamic Polymorphism)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "In this type, the method behavior is determined at runtime. This is achieved through method overriding."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Explanation of Polymorphism Types"
+        },
+        {
+          "type": "heading",
+          "text": "Compile-time Polymorphism"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Compile-time polymorphism is also known as static polymorphism or early binding. In this type of polymorphism, the method to be called is determined at the time of compilation based on the method signature.",
+            "Method overloading is a common example of compile-time polymorphism. It allows multiple methods to have the same name but differ by the number or type of parameters."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example of Method Overloading"
+        },
+        {
+          "type": "text",
+          "text": "public class Calculator { // Overloaded method with two parameters public int add(int a, int b) { return a + b; } // Overloaded method with three parameters public int add(int a, int b, int c) { return a + b + c; } }"
+        },
+        {
+          "type": "heading",
+          "text": "Runtime Polymorphism"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Runtime polymorphism is also known as Dynamic Polymorphism or Late Binding. In this type, the method to be executed is determined at runtime, depending on the object's actual class.",
+            "Method Overriding is a common example of runtime polymorphism. It allows a subclass to provide a specific implementation of a method that is already defined in its parent class."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example of Method Overriding"
+        },
+        {
+          "type": "text",
+          "text": "class Animal { // Method in the parent class public void sound() { System.out.println(\"Animal makes a sound\"); } } class Dog extends Animal { // Overriding the sound method in the subclass @Override public void sound() { System.out.println(\"Dog barks\"); } } public class Main { public static void main(String[] args) { Animal myDog = new Dog(); // Runtime Polymorphism myDog.sound(); // Outputs: Dog barks } }"
+        },
+        {
+          "type": "heading",
+          "text": "Comparison of Method Overloading and Method Overriding"
+        },
+        {
+          "type": "heading",
+          "text": "Method Overloading"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Occurs within the same class.",
+            "Involves methods with the same name but different parameters.",
+            "It is a compile-time concept."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Method Overriding"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Occurs between a superclass and a subclass.",
+            "Involves methods with the same name, parameters, and return type.",
+            "It is a runtime concept."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Advantages of Polymorphism"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Code Reusability: Polymorphism allows you to reuse existing code more efficiently.",
+            "Flexibility: You can write more flexible and maintainable code.",
+            "Simplified Interface: Different types of objects can be accessed through the same interface, simplifying code interactions."
+          ]
+        }
+      ],
+      "pages": "178-180"
+    },
+    {
+      "id": "final-keyword",
+      "title": "Final Keyword",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Final Keyword in Java The final keyword in Java is used to restrict the modification of variables, methods, and classes. It plays a crucial role in defining constants and preventing inheritance or method overriding. Let's explore how final can be used in different contexts: 1. Final Variable A variable declared with the final keyword cannot be modified once it is initialized."
+        },
+        {
+          "type": "text",
+          "text": "This makes the variable effectively a constant."
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Explanation: Once num is declared as final, any attempt to change its value will result in a compilation error. 2. Final Class A class declared as final cannot be extended (inherited). This is useful when you want to prevent other classes from inheriting and modifying its behavior."
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Explanation: The final keyword prevents the Calc class from being extended by any other class. 3. Final Method A method declared with the final keyword cannot be overridden by subclasses. This ensures that the method’s implementation remains unchanged in all derived classes."
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Explanation: The show method in Calc is marked as final, so it cannot be overridden by AdvCalc."
+        },
+        {
+          "type": "heading",
+          "text": "Characteristics of final Keyword"
+        },
+        {
+          "type": "text",
+          "text": "Final Variables: Once initialized, their value cannot be changed. This is useful for constants. Final Methods: These cannot be overridden, ensuring that the implementation stays consistent across all subclasses. Final Classes: These cannot be extended, which is useful when a class is meant to be used as-is without modification."
+        },
+        {
+          "type": "text",
+          "text": "Initialization: Final variables must be initialized when declared or within the constructor, ensuring they are assigned exactly once. Performance: Using final can improve performance as the compiler can optimize the code knowing that the value or method won’t change. Security: The final keyword helps in protecting data and methods from being modified by malicious code."
+        },
+        {
+          "type": "heading",
+          "text": "Conclusion"
+        },
+        {
+          "type": "text",
+          "text": "The final keyword in Java is a powerful tool for creating constants, preventing inheritance, and ensuring methods are not overridden. It provides security, performance, and clarity in the codebase by restricting unwanted modifications."
+        },
+        {
+          "type": "heading",
+          "text": "FAQs about the final Keyword in Java"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "What is a final method in Java? A final method is a method that cannot be overridden by subclasses. It ensures that the method's behavior remains unchanged across the inheritance hierarchy.",
+            "Is a final method inherited? Yes, a final method is inherited by the subclass, but it cannot be overridden or modified.",
+            "Can a final class be instantiated? Yes, a final class can be instantiated, just like any other class. However, it cannot be extended.",
+            "What is the difference between final and static keywords in Java?"
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Final Keyword: Used to declare variables, methods, or classes as unmodifiable.",
+            "Static Keyword: Used to declare class members (variables and methods) that belong to the class itself, not to instances of the class. 5. Can we declare a String variable as final? Yes, you can declare a String variable as final, which means that once it is initialized, it cannot be changed."
+          ]
+        }
+      ],
+      "pages": "181-184"
+    },
+    {
+      "id": "object-class-equals-tostring-hashcode",
+      "title": "Object Class: equals, toString, hashCode",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Introduction to the Object Class"
+        },
+        {
+          "type": "text",
+          "text": "In Java, the Object class is the root class of the class hierarchy. Every class in Java is directly or indirectly derived from the Object class, meaning that it serves as the parent class for all other classes. If a class does not explicitly extend another class, it implicitly extends the Object class, making all methods of the Object class available to every Java class."
+        },
+        {
+          "type": "text",
+          "text": "The Object class provides several key methods that are essential for basic object manipulation, including toString(), equals(), and hashCode(). Understanding these methods is crucial for working with objects in Java, especially when dealing with collections, object comparison, and debugging. The toString() Method The toString() method in Java is used to obtain a string representation of an object. By default, when you print an object, the toString() method is implicitly called, returning a string that includes the class name followed by the \"@\" symbol and the object's hashcode in hexadecimal form."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax of toString() Method"
+        },
+        {
+          "type": "text",
+          "text": "Default Behavior of toString() Method: By default, the toString() method returns the name of the class, followed by \"@\" and the hexadecimal representation of the object's hash code. This behavior is useful when you need a basic string representation of an object, but in most cases, it's more practical to override the toString() method to provide a more meaningful output."
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "In the above example, when we try to print the object obj, it returns a string that represents the class name and hash code. This occurs because the toString() method of the Object class is invoked by default. Overriding the toString() Method: To make the output more meaningful, you can override the toString() method in your class."
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Here, the toString() method is overridden to provide a more meaningful representation of the Laptop object. The hashCode() Method The hashCode() method returns a hash code value (an integer) for the object. This hash code is primarily used in hashing-based collections and algorithms such as HashMap, HashSet, and Hashtable."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax of hashCode() Method"
+        },
+        {
+          "type": "text",
+          "text": "When you override the equals() method in a class, it is also a good practice to override the hashCode() method to ensure that objects that are considered equal have the same hash code. The equals() Method The equals() method is used to compare two objects for equality."
+        },
+        {
+          "type": "text",
+          "text": "The default implementation of equals() provided by the Object class checks whether two references point to the same object in memory."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax of equals() Method"
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "In this example, the equals() method is overridden to compare the content of two Laptop objects rather than their memory references. Advantages of Overriding toString(), equals(), and hashCode() Improved Debugging: Overriding toString() allows you to get a more meaningful output when printing objects, making it easier to debug."
+        },
+        {
+          "type": "text",
+          "text": "Accurate Object Comparison: Overriding equals() ensures that object comparisons are based on actual content rather than memory references. Proper Hashing: Overriding hashCode() ensures that objects that are considered equal have the same hash code, which is critical for the correct functioning of hash- based collections."
+        },
+        {
+          "type": "heading",
+          "text": "Conclusion"
+        },
+        {
+          "type": "text",
+          "text": "The Object class in Java provides fundamental methods such as toString(), equals(), and hashCode(), which are crucial for object manipulation. By understanding and correctly overriding these methods, you can enhance the functionality and readability of your Java programs."
+        },
+        {
+          "type": "heading",
+          "text": "FAQs"
+        },
+        {
+          "type": "text",
+          "text": "1. Can we override the toString() method in every class?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Yes, you can override the toString() method in any class to provide a custom string representation of your objects. 2. Why is it important to override the hashCode() method when equals() is overridden?",
+            "It's important because objects that are considered equal by the equals() method must have the same hash code to maintain the contract between equals() and hashCode(). 3. What happens if we do not override the equals() method?",
+            "If you do not override the equals() method, the default implementation from the Object class will be used, which compares memory references rather than content. 4. Is it mandatory to override toString() in every class?",
+            "No, it's not mandatory, but it's often useful for debugging and logging purposes. 5. Can two different objects have the same hash code?",
+            "Yes, different objects can have the same hash code due to hash code collisions, but good hash code implementations minimize the chances of collisions."
+          ]
+        }
+      ],
+      "pages": "185-189"
+    },
+    {
+      "id": "upcasting-and-downcasting",
+      "title": "Upcasting and Downcasting",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Typecasting is the process of converting one data type to another. In Java, this concept extends beyond basic data types to include objects, leading to what is known as object typecasting. Object typecasting involves converting a reference of one type into another, specifically between parent and child classes. This can be categorized into two types"
+        },
+        {
+          "type": "text",
+          "text": "Upcasting (Child to Parent) Downcasting (Parent to Child) Typecasting ensures that variables are processed correctly by functions. While upcasting can be done implicitly or explicitly, downcasting requires explicit casting and can be risky if not handled properly."
+        },
+        {
+          "type": "heading",
+          "text": "Example of Typecasting"
+        },
+        {
+          "type": "text",
+          "text": "In this example, we are typecasting a double to an int. The compiler warns that data might be lost due to the conversion, but we accept it. The output is 4, demonstrating how typecasting works with primitive types. Object-Oriented Typecasting (OOP) Upcasting and Downcasting are essential concepts in Java's object-oriented programming (OOP)."
+        },
+        {
+          "type": "text",
+          "text": "They allow us to cast objects from one type to another within an inheritance hierarchy. Upcasting Upcasting is the process of converting a child class reference to a parent class reference. It’s a safe operation that doesn’t require explicit casting because every child object is an instance of the parent class. Upcasting is also known as generalization or widening."
+        },
+        {
+          "type": "heading",
+          "text": "Benefits of Upcasting"
+        },
+        {
+          "type": "text",
+          "text": "Simplifies code by allowing a uniform interface to handle different objects. Enables polymorphism, where a single method can be used on objects of different types."
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "In this example, B is upcasted to A. The show1() method of class A is accessible, but the show2() method of B is not, since the reference type is A. Downcasting Downcasting is the reverse of upcasting, where we cast a parent class reference back to a child class reference. This operation is more restrictive and can lead to runtime exceptions if not handled correctly."
+        },
+        {
+          "type": "text",
+          "text": "In Java, downcasting must be done explicitly using the cast operator."
+        },
+        {
+          "type": "heading",
+          "text": "Risks of Downcasting"
+        },
+        {
+          "type": "text",
+          "text": "Can throw ClassCastException if the object being cast is not actually an instance of the target class. Should be used cautiously, often with checks using the instanceof operator."
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "Here, obj is first upcasted to A, then downcasted back to B. The method show2() from class B is accessible after downcasting."
+        },
+        {
+          "type": "heading",
+          "text": "Conclusion"
+        },
+        {
+          "type": "text",
+          "text": "Whether you are performing upcasting or downcasting, these operations are fundamental to understanding polymorphism and inheritance in Java. Upcasting is generally safer and more commonly used, while downcasting requires careful handling to avoid runtime errors."
+        },
+        {
+          "type": "heading",
+          "text": "FAQs on Upcasting and Downcasting"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "What is the difference between upcasting and downcasting? Upcasting refers to converting a child class reference to a parent class reference, while downcasting is converting a parent class reference back to a child class reference.",
+            "Is upcasting always safe in Java? Yes, upcasting is safe and can be done implicitly because every child class object is an instance of its parent class.",
+            "Why is downcasting not safe? Downcasting can lead to ClassCastException at runtime if the object being cast is not an instance of the target class. It requires explicit casting and often involves runtime checks using the instanceof operator. 4. Can we access child class methods after upcasting? No, after upcasting, only methods and variables defined in the parent class are accessible. To access child class-specific methods, downcasting is required. ."
+          ]
+        }
+      ],
+      "pages": "190-193"
+    }
+  ]
+}

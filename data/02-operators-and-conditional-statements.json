@@ -1,0 +1,605 @@
+{
+  "topics": [
+    {
+      "id": "arithmetic-operators",
+      "title": "Arithmetic Operators",
+      "summary": "",
+      "code": {
+        "filename": "ArithmeticOperators.java",
+        "language": "java",
+        "text": "int num1 = 7;\nint num2 = 5;\n// Addition\nint res = num1 + num2;\nSystem.out.println(res); // Output: 12\nint num1 = 26;\nint num2 = 5;\nint res = num1 % num2;\nSystem.out.println(res); // Output: 1\nint num1 = 7;\nnum1 += 2; // Equivalent to num1 = num1 + 2;\nSystem.out.println(num1); // Output: 9\nint num2 = 16;\nnum2 -= 4; // Equivalent to num2 = num2 - 4;\nSystem.out.println(num2); // Output: 12"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Operators in Java Operators are symbols that perform specific operations on one or more operands. In Java, we commonly use operators for basic arithmetic operations like addition (+), subtraction (-), multiplication (*), and division (/), as well as for other functions like modulus (%)."
+        },
+        {
+          "type": "heading",
+          "text": "Example: Basic Arithmetic Operations"
+        },
+        {
+          "type": "text",
+          "text": "int num1 = 7; int num2 = 5; // Addition int res = num1 + num2; System.out.println(res); // Output: 12"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Addition (+): Adds two operands.",
+            "Subtraction (-): subtracts the second operand from the first.",
+            "Multiplication (*): Multiplies two operands.",
+            "Division (/): Divides the first operand by the second, giving the quotient.",
+            "Modulus (%) : Returns the remainder after division."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example: modulus operation"
+        },
+        {
+          "type": "text",
+          "text": "int num1 = 26; int num2 = 5; int res = num1 % num2; System.out.println(res); // Output: 1 In this example, 26 % 5 equals 1 because 26 divided by 5 is 5 with a remainder of 1. Increment and Decrement Operators The increment (++) and decrement (--) operators always change the value by 1. These can be applied in two forms: pre and post."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Pre-increment (++x)/Pre-decrement (--x): Increases or decreases the value before the operation is performed.",
+            "Post-increment (x++) / post-decrement (x--): Increases or decreases the value after the operation is performed."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example: Increment Operations"
+        },
+        {
+          "type": "text",
+          "text": "int num1 = 7; num1 += 2; // Equivalent to num1 = num1 + 2; System.out.println(num1); // Output: 9 int num2 = 16; num2 -= 4; // Equivalent to num2 = num2 - 4; System.out.println(num2); // Output: 12"
+        },
+        {
+          "type": "heading",
+          "text": "Example: Pre and Post Increment/Decrement"
+        },
+        {
+          "type": "heading",
+          "text": "Code"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Pre-increment (++x): x is incremented first, so x becomes 6, and then y is assigned the value of x, making y = 6.",
+            "Post-decrement (x--): The current value of x (which is 6) is assigned to z, and then x is decremented, making x = 5.",
+            "Pre-decrement (--x): x is decremented first, so x becomes 4, and then w is assigned the value of x, making w = 4."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Key Differences"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Pre-increment/decrement: Modifies the variable's value before using it in an expression.",
+            "Post-increment/decrement: Uses the variable's original value in the expression before modifying it."
+          ]
+        }
+      ],
+      "pages": "20-22"
+    },
+    {
+      "id": "relational-operators",
+      "title": "Relational Operators",
+      "summary": "",
+      "code": {
+        "filename": "RelationalOperators.java",
+        "language": "java",
+        "text": "int a = 10;\nint b = 20;\n// Equality (==)\nSystem.out.println(a == b); // Output: false\n// Inequality (!=)\nSystem.out.println(a != b); // Output: true\n// Greater than (>)\nSystem.out.println(a > b); // Output: false\n// Less than (<)\nSystem.out.println(a < b); // Output: true\n// Greater than or equal to (>=)\nSystem.out.println(a >= b); // Output: false\n// Less than or equal to (<=)\nSystem.out.println(a <= b); // Output: true"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Java Relational Operators are binary operators that are used to evaluate relationships between two operands, such as equality, greater than, less than, and so on. These comparisons return boolean results, and they are commonly used in looping statements, conditional if-else statements, and similar constructs. The standard format for representing a relational operator is:"
+        },
+        {
+          "type": "heading",
+          "text": "Syntax"
+        },
+        {
+          "type": "text",
+          "text": "variable1 relational_operator variable2 implementation"
+        },
+        {
+          "type": "text",
+          "text": "Equality (==): Checks if two values are equal. Inequality (!=): Checks if two values are not equal. Greater than (>): checks if the left operand is greater than the right operand. Less than (<): Checks if the left operand is less than the right operand. Greater than or equal to (>=): Checks if the left operand is greater than or equal to the right operand."
+        },
+        {
+          "type": "text",
+          "text": "Less than or equal to (<=): Checks if the left operand is less than or equal to the right operand."
+        },
+        {
+          "type": "heading",
+          "text": "Examples of Each Operator"
+        },
+        {
+          "type": "text",
+          "text": "int a = 10; int b = 20; // Equality (==) System.out.println(a == b); // Output: false // Inequality (!=) System.out.println(a != b); // Output: true // Greater than (>) System.out.println(a > b); // Output: false // Less than (<) System.out.println(a < b); // Output: true // Greater than or equal to (>=) System.out.println(a >= b); // Output: false // Less than or equal to (<=) System.out.println(a <= b); // Output: true"
+        }
+      ],
+      "pages": "23-24"
+    },
+    {
+      "id": "logical-operators",
+      "title": "Logical Operators",
+      "summary": "",
+      "code": {
+        "filename": "LogicalOperators.java",
+        "language": "java",
+        "text": "int x = 7, y = 5, a = 5, b = 9;\nboolean result = (x > y) && (a < b);\nSystem.out.println(result); // Output: true\nboolean result = (x > y) || (a > b);\nSystem.out.println(result); // Output: true\nboolean result = !(x < y);\nSystem.out.println(result); // Output: true\nboolean result = (x > y) ^ (a < b);\nSystem.out.println(result); // Output: false\npublic class LogicalOperatorsExample {\npublic static void main(String[] args) {\nint x = 7, y = 5, a = 5, b = 9;\n// AND operation\nboolean andResult = (x > y) && (a < b);\nSystem.out.println(\"AND Result: \" + andResult); // Output: true\n// OR operation\nboolean orResult = (x > y) || (a > b);\nSystem.out.println(\"OR Result: \" + orResult); // Output: true\n// NOT operation\nboolean notResult = !(x < y);\nSystem.out.println(\"NOT Result: \" + notResult); // Output: true\n// XOR operation\nboolean xorResult = (x > y) ^ (a < b);\nSystem.out.println(\"XOR Result: \" + xorResult); // Output: false\n}\n}"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Logical operators in Java are used to perform logical operations on boolean expressions. These operators are crucial for decision-making in programs."
+        },
+        {
+          "type": "heading",
+          "text": "Here's a breakdown of the main logical operators"
+        },
+        {
+          "type": "text",
+          "text": "1. Logical AND (& and &&)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "& (Bitwise AND): Evaluates both operands.",
+            "&& (Short-Circuit AND): Evaluates the second operand only if the first is true."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "int x = 7, y = 5, a = 5, b = 9; boolean result = (x > y) && (a < b); System.out.println(result); // Output: true Explanation: Both conditions (x > y) and (a < b) are true, so the result is true. 2. Logical OR (| and ||)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "| (Bitwise OR): Evaluates both operands.",
+            "|| (Short-Circuit OR): Evaluates the second operand only if the first is false."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "boolean result = (x > y) || (a > b); System.out.println(result); // Output: true Explanation: The first condition (x > y) is true, so the result is true regardless of the second condition. 3. Logical NOT (!)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "!: Inverts the boolean value of an expression."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "boolean result = !(x < y); System.out.println(result); // Output: true"
+        },
+        {
+          "type": "text",
+          "text": "Explanation: Since (x < y) is false, !(x < y) becomes true."
+        },
+        {
+          "type": "text",
+          "text": "4. Logical XOR (^)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "If precisely one operand is true, the function returns true; if not, it returns false."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "boolean result = (x > y) ^ (a < b); System.out.println(result); // Output: false Explanation: Both (x > y) and (a < b) are true, so the XOR result is false."
+        },
+        {
+          "type": "heading",
+          "text": "Example Program Combining All Logical Operators"
+        },
+        {
+          "type": "text",
+          "text": "public class LogicalOperatorsExample { public static void main(String[] args) { int x = 7, y = 5, a = 5, b = 9; // AND operation boolean andResult = (x > y) && (a < b); System.out.println(\"AND Result: \" + andResult); // Output: true // OR operation boolean orResult = (x > y) || (a > b); System.out.println(\"OR Result: \" + orResult); // Output: true // NOT operation boolean notResult = !(x < y); System.out.println(\"NOT Result: \" + notResult); // Output: true // XOR operation boolean xorResult = (x > y) ^ (a < b);"
+        },
+        {
+          "type": "command",
+          "text": "System.out.println(\"XOR Result: \" + xorResult); // Output: false } }"
+        },
+        {
+          "type": "heading",
+          "text": "Key Points"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Logical AND (&&) and Logical OR (||) are short-circuit operators, meaning they can skip evaluating the second operand if the result is already determined by the first operand.",
+            "Logical NOT (!) negates the boolean value of an expression.",
+            "Logical XOR (^) is true only if exactly one of the operands is true."
+          ]
+        }
+      ],
+      "pages": "25-27"
+    },
+    {
+      "id": "if-else-statement",
+      "title": "If-Else Statement",
+      "summary": "",
+      "code": {
+        "filename": "IfElseStatement.java",
+        "language": "java",
+        "text": "int x = 8;\nSystem.out.println(\"hello\");\nSystem.out.println(\"bye\");\n// Applying an if condition\nif (x > 10) {\n// The condition requires a boolean value (true or false).\nSystem.out.println(\"hello\");\n}\n// No output for this condition as x is not greater than 10\nint x = 18;\nif (x > 10 && x <= 20) {  //using logical operations with two expressions.\nSystem.out.println(\"hello\"); // Output: hello\n}\nint x = 15;\nif (x > 10) {\nSystem.out.println(\"Value is greater than 10\");\n} else {\nSystem.out.println(\"Value is 10 or less\");\n}"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Conditional statement"
+        },
+        {
+          "type": "text",
+          "text": "Conditional statements in programming are essential for controlling the flow of a program based on specific conditions. These statements enable the execution of different blocks of code depending on whether a given condition evaluates to true or false. This mechanism is fundamental for decision-making in algorithms."
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "Consider an automatic car or vehicle, which adjusts its speed based on road conditions."
+        },
+        {
+          "type": "heading",
+          "text": "Here's how it might work"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Free Road/Highway: The car increases its speed when the road is clear.",
+            "Heavy Traffic: The car reduces its speed automatically when there is heavy traffic.",
+            "Obstacle Detection: The car stops if an obstacle or person comes in front of it. These actions are based on conditions, demonstrating the practical use of conditional statements. if-else Statement The if-else statement extends the if statement by adding an else clause. If the condition is true, the program executes the code in the if block or else it is false then statement in else block is executed."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "To start with, let's explore the if-else statement"
+        },
+        {
+          "type": "text",
+          "text": "int x = 8; System.out.println(\"hello\"); System.out.println(\"bye\"); // Applying an if condition"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "if (x > 10) { // The condition requires a boolean value (true or false). System.out.println(\"hello\"); } // No output for this condition as x is not greater than 10",
+            "int x = 18; if (x > 10 && x <= 20) { //using logical operations with two expressions. System.out.println(\"hello\"); // Output: hello }"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Syntax of if-else"
+        },
+        {
+          "type": "heading",
+          "text": "In Java, the syntax for an if-else statement is as follows"
+        },
+        {
+          "type": "list",
+          "items": [
+            "If the condition is true, the block of code within the if statement is executed.",
+            "If there is only one statement to execute, curly braces {} are optional.",
+            "If there are multiple statements, curly braces are mandatory to group them together. 3. int x = 15; if (x > 10) { System.out.println(\"Value is greater than 10\"); } else { System.out.println(\"Value is 10 or less\"); }"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Value is greater than 10"
+        },
+        {
+          "type": "heading",
+          "text": "Key Points to Remember"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Indentation in Java does not affect the execution but helps in making the code clean and easy to understand.",
+            "if conditions always evaluate to a boolean values (true or false)."
+          ]
+        }
+      ],
+      "pages": "28-29"
+    },
+    {
+      "id": "if-else-if",
+      "title": "If Else If",
+      "summary": "",
+      "code": {
+        "filename": "IfElseIf.java",
+        "language": "java",
+        "text": "if (condition1) {\n// code to execute if condition1 is true\n} else if (condition2) {\n// code to execute if condition2 is true\n} else {\n// code to execute if all conditions are false\n}\nint x = 8, y = 7, z = 6;\nif (x > y && x > z) {\nSystem.out.println(x); }\nelse {\nSystem.out.println(y);\n}\nz = 9;\nif (x > y && x > z) {\nSystem.out.println(x);\n} else {\nSystem.out.println(y); // Output: 7\n}\ny = 17;\nif (x > y && x > z) {  // Checking if x is the greatest\nSystem.out.println(x);\n} else if (y > x && y > z) {  // Checking if y is the greatest\nSystem.out.println(y); // Output: 17\n}\nx = 8;\ny = 7;\nz = 9;\nif (x > y && x > z) {  // Checking if x is the greatest\nSystem.out.println(x);\n} else if (y > z) {  // Checking if y is the greatest\nSystem.out.println(y);\n} else {\nSystem.out.println(z); // Output: 9\n}"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "If else if The if-else if statement allows for multiple conditions to be checked in sequence. If the if condition is false, the program checks the next else if condition, and so on."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax of If-Else if Conditional Statement"
+        },
+        {
+          "type": "text",
+          "text": "if (condition1) { // code to execute if condition1 is true } else if (condition2) { // code to execute if condition2 is true } else { // code to execute if all conditions are false }"
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "To determine the greatest value among three variables (x, y, and z), we can use if-else if statements along with logical operators. This is a common programming scenario where conditional logic helps in decision-making based on multiple criteria."
+        },
+        {
+          "type": "heading",
+          "text": "Example 1: Basic Comparison"
+        },
+        {
+          "type": "text",
+          "text": "int x = 8, y = 7, z = 6; if (x > y && x > z) { System.out.println(x); } else { System.out.println(y); } o/p:8"
+        },
+        {
+          "type": "heading",
+          "text": "Example 2: Adjusted Values"
+        },
+        {
+          "type": "command",
+          "text": "z = 9; if (x > y && x > z) { System.out.println(x); } else { System.out.println(y); // Output: 7 }"
+        },
+        {
+          "type": "heading",
+          "text": "Example 3: Additional Condition"
+        },
+        {
+          "type": "text",
+          "text": "y = 17; if (x > y && x > z) { // Checking if x is the greatest System.out.println(x); } else if (y > x && y > z) { // Checking if y is the greatest System.out.println(y); // Output: 17 }"
+        },
+        {
+          "type": "heading",
+          "text": "Example 4: Complete Comparison with else Block"
+        },
+        {
+          "type": "text",
+          "text": "x = 8; y = 7; z = 9; if (x > y && x > z) { // Checking if x is the greatest System.out.println(x); } else if (y > z) { // Checking if y is the greatest System.out.println(y); } else { System.out.println(z); // Output: 9 }"
+        },
+        {
+          "type": "heading",
+          "text": "Key Points"
+        },
+        {
+          "type": "text",
+          "text": " Logical Operators: Used to combine multiple conditions (e.g., && for \"and\").  Conditional Blocks: Use curly braces {} for clarity, especially with multiple statements.  Complete Conditions: Always cover all possible scenarios, including the final else block."
+        }
+      ],
+      "pages": "30-31"
+    },
+    {
+      "id": "ternary",
+      "title": "Ternary",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The ternary operator is a concise way to write an if-else statement. It involves three operands: a condition, a result for when the condition is true, and a result for when the condition is false. This operator can help reduce the lines of code required for simple conditional assignments."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax of Ternary Expression"
+        },
+        {
+          "type": "text",
+          "text": "condition ? result_if_true : result_if_false; Implementation of Ternary Expression Checking if a Number is Even or Odd: Using Simple if-else Approach int n = 4; int res = 0; if (n % 2 == 0) { res = 10; } else { res = 20; } System.out.println(res); // Output: 10 Checking if a Number is Even or Odd: Using Ternary Operator int n = 4; int res = (n % 2 == 0) ? 10 : 20; System.out.println(res); // Output: 10"
+        },
+        {
+          "type": "heading",
+          "text": "Example with Different Input"
+        },
+        {
+          "type": "text",
+          "text": "int n = 5; int res = (n % 2 == 0) ? 10 : 20; System.out.println(res); // Output: 20 The ternary operator provides a one-line solution for conditional expressions, making the code more compact. However, it may not always be suitable for complex if-else statements that require multiple actions or complex logic."
+        },
+        {
+          "type": "heading",
+          "text": "Key Points"
+        },
+        {
+          "type": "text",
+          "text": " Conciseness: The ternary operator reduces the number of lines needed for simple condition checks.  Readability: While the ternary operator can make the code more compact, it should be used carefully to maintain readability, especially for more complex conditions.  Limitations: It is best suited for straightforward if-else scenarios and may not work well for cases involving multiple statements or complex logic."
+        }
+      ],
+      "pages": "32-33"
+    },
+    {
+      "id": "switch-statement",
+      "title": "Switch Statement",
+      "summary": "",
+      "code": {
+        "filename": "SwitchStatement.java",
+        "language": "java",
+        "text": "switch (variable) {\ncase value1:\n// code to execute if variable equals value1\nbreak;\ncase value2:\n// code to execute if variable equals value2\nbreak;\n// code to execute if variable doesn't match any case\n}\nswitch(n) {\ncase 1:\nSystem.out.println(\"Monday\");\nbreak;\ncase 2:\nSystem.out.println(\"Tuesday\");\nbreak;\ncase 3:\nSystem.out.println(\"Wednesday\");\nbreak;\ncase 4:\nSystem.out.println(\"Thursday\");\nbreak;\ncase 5:\nSystem.out.println(\"Friday\");\nbreak;\ncase 6:\nSystem.out.println(\"Saturday\");\nbreak;\ncase 7:\nSystem.out.println(\"Sunday\");\nbreak;\nSystem.out.println(\"Invalid day\");\n}"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The switch statement is used to evaluate a variable against a series of values, offering a more readable alternative to lengthy if-else-if chains. Each block in a switch statement is represented by a case, and typically, the execution of a case block is terminated using the break keyword."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax of Switch Conditional Statement"
+        },
+        {
+          "type": "text",
+          "text": "switch (variable) {"
+        },
+        {
+          "type": "command",
+          "text": "case value1"
+        },
+        {
+          "type": "command",
+          "text": "// code to execute if variable equals value1 break;"
+        },
+        {
+          "type": "command",
+          "text": "case value2"
+        },
+        {
+          "type": "command",
+          "text": "// code to execute if variable equals value2 break;"
+        },
+        {
+          "type": "command",
+          "text": "default"
+        },
+        {
+          "type": "command",
+          "text": "// code to execute if variable doesn't match any case }"
+        },
+        {
+          "type": "heading",
+          "text": "Use Cases of Switch Statement"
+        },
+        {
+          "type": "text",
+          "text": " Selecting a Code Block: Efficiently choose one among many code blocks to execute based on the value of a variable.  Handling Multiple Cases: Manage multiple scenarios clearly and concisely."
+        },
+        {
+          "type": "heading",
+          "text": "Example: Printing Weekdays"
+        },
+        {
+          "type": "text",
+          "text": "Let's consider an example where we want to print the name of the day based on a number:  Using if-else-if approach: If n = 1 to 7, we need to use multiple if-else blocks to print the corresponding weekday.  Using switch statement: We can replace the complex if-else chain with a switch statement for clarity and efficiency. switch(n) {"
+        },
+        {
+          "type": "command",
+          "text": "case 1"
+        },
+        {
+          "type": "command",
+          "text": "System.out.println(\"Monday\"); break;"
+        },
+        {
+          "type": "command",
+          "text": "case 2"
+        },
+        {
+          "type": "command",
+          "text": "System.out.println(\"Tuesday\"); break;"
+        },
+        {
+          "type": "command",
+          "text": "case 3"
+        },
+        {
+          "type": "command",
+          "text": "System.out.println(\"Wednesday\"); break;"
+        },
+        {
+          "type": "command",
+          "text": "case 4"
+        },
+        {
+          "type": "command",
+          "text": "System.out.println(\"Thursday\"); break;"
+        },
+        {
+          "type": "command",
+          "text": "case 5"
+        },
+        {
+          "type": "command",
+          "text": "System.out.println(\"Friday\"); break;"
+        },
+        {
+          "type": "command",
+          "text": "case 6"
+        },
+        {
+          "type": "command",
+          "text": "System.out.println(\"Saturday\"); break;"
+        },
+        {
+          "type": "command",
+          "text": "case 7"
+        },
+        {
+          "type": "command",
+          "text": "System.out.println(\"Sunday\"); break;"
+        },
+        {
+          "type": "command",
+          "text": "default"
+        },
+        {
+          "type": "command",
+          "text": "System.out.println(\"Invalid day\"); }"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "In this example, if n is 2, the output will be \"Tuesday\"."
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "The break statement prevents the execution from falling through to subsequent cases. Without the break statement, the program would continue executing the following cases until it encounters a break or reaches the end of the switch block."
+        },
+        {
+          "type": "text",
+          "text": "The default case is executed if none of the specified cases match the variable's value, ensuring that the program handles unexpected values gracefully. Note: The break keyword is crucial in Java to prevent fall-through behaviour."
+        }
+      ],
+      "pages": "34-37"
+    }
+  ]
+}

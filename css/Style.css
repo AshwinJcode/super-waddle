@@ -1,0 +1,164 @@
+/* ---------- Tokens ---------- */
+:root{
+  --bg:#080d19;
+  --panel:rgba(16,24,39,.78);
+  --text:#edf3ff;
+  --body:#b7c3d8;
+  --muted:#91a0ba;
+  --line:rgba(255,255,255,.08);
+  --accent:#7567ff;
+  --accent2:#45c8e8;
+  --green:#55d88a;
+  --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --header:70px;
+}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;min-height:100vh;color:var(--text);
+  font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 10% 0%,rgba(117,103,255,.12),transparent 28rem),
+    radial-gradient(circle at 90% 15%,rgba(69,200,232,.08),transparent 25rem),
+    var(--bg);
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+
+/* ---------- Header ---------- */
+header{
+  position:sticky;top:0;z-index:50;height:var(--header);
+  display:flex;align-items:center;gap:16px;padding:0 28px;
+  background:rgba(8,13,25,.85);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+header h1{margin:0;font-size:19px;font-weight:750}
+.logo{
+  width:40px;height:40px;display:grid;place-items:center;
+  border-radius:12px;font-weight:900;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow:0 9px 28px rgba(117,103,255,.25);
+}
+.menu-btn{
+  display:none;width:38px;height:38px;place-items:center;
+  border:1px solid var(--line);border-radius:10px;
+  background:rgba(255,255,255,.05);cursor:pointer;
+}
+
+/* ---------- Layout + sidebar ---------- */
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr)}
+nav{
+  position:sticky;top:var(--header);height:calc(100vh - var(--header));
+  overflow-y:auto;padding:14px 13px 28px;
+  background:rgba(10,16,29,.72);border-right:1px solid var(--line);
+  scrollbar-width:thin;
+}
+nav details{margin-bottom:6px}
+nav summary{
+  display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  padding:10px 12px;border-radius:10px;cursor:pointer;list-style:none;
+  font-size:13px;font-weight:700;color:#dbe4f5;
+}
+nav summary::-webkit-details-marker{display:none}
+nav summary:hover{background:rgba(255,255,255,.05)}
+nav summary small{flex-shrink:0;white-space:nowrap;font-size:11px;font-weight:600;color:var(--muted)}
+nav a{
+  display:flex;align-items:center;gap:10px;margin:2px 0;padding:9px 12px;
+  border-radius:10px;color:#aebbd1;text-decoration:none;font-size:14px;line-height:1.35;
+}
+nav a:hover{background:rgba(255,255,255,.055);color:#fff}
+nav a[aria-current=page]{
+  color:#fff;
+  background:linear-gradient(90deg,rgba(117,103,255,.22),rgba(69,200,232,.05));
+  box-shadow:inset 3px 0 0 var(--accent);
+}
+nav a b{
+  flex:none;width:25px;height:25px;display:grid;place-items:center;
+  border-radius:8px;background:rgba(255,255,255,.055);
+  color:#8795ae;font-size:11px;font-weight:600;
+}
+
+/* ---------- Content ---------- */
+main{width:100%;max-width:980px;margin:0 auto;padding:36px 34px 60px}
+.section-label{margin:0 0 14px;color:var(--accent2);font-size:13px;font-weight:700}
+.topic-title{
+  margin:0;padding:30px 32px 26px;
+  font-size:38px;font-weight:800;line-height:1.15;letter-spacing:-.7px;
+  border:1px solid var(--line);border-radius:22px;
+  background:linear-gradient(135deg,rgba(117,103,255,.13),rgba(69,200,232,.04) 48%,rgba(255,255,255,.02));
+  box-shadow:0 20px 55px rgba(0,0,0,.25);
+}
+.topic-sub{margin:18px 0 0;max-width:70ch;color:var(--muted);font-size:17px;line-height:1.7}
+
+.code-block,.explain{
+  margin-top:20px;border:1px solid var(--line);border-radius:17px;
+  overflow:hidden;background:var(--panel);
+}
+.code-block-head{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  min-height:50px;padding:10px 16px;border-bottom:1px solid var(--line);
+  color:#cdd7ea;font-size:13px;font-weight:700;
+}
+.code-block-head span::before{
+  content:"";display:inline-block;width:9px;height:9px;margin-right:10px;
+  border-radius:50%;background:var(--green);box-shadow:0 0 10px rgba(85,216,138,.6);
+}
+.copy-btn{
+  padding:7px 13px;font-size:12px;cursor:pointer;
+  border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.05);
+}
+.copy-btn:hover{background:rgba(117,103,255,.17);border-color:rgba(117,103,255,.4)}
+pre{
+  margin:0;padding:22px 24px;max-height:620px;overflow:auto;
+  background:#090e19;color:#dce7ff;font:15px/1.7 var(--mono);tab-size:4;
+}
+
+/* ---------- Explanation blocks ---------- */
+.explain{padding:30px 34px 34px}
+.explain>*{max-width:70ch}
+.explain h3{margin:36px 0 10px;padding-top:28px;border-top:1px solid var(--line);font-size:20px;line-height:1.3}
+.explain>h3:first-child{margin-top:0;padding-top:0;border:0}
+.explain p{margin:0 0 12px;color:var(--body);line-height:1.85}
+.explain :not(pre)>code{
+  padding:2px 8px;font:.88em var(--mono);color:#d9cfff;
+  background:rgba(117,103,255,.13);border:1px solid rgba(117,103,255,.2);border-radius:6px;
+}
+.explain pre{margin:12px 0 16px;padding:14px 18px;font-size:14px;border:1px solid var(--line);border-radius:12px}
+.note{
+  margin:14px 0 18px;padding:14px 18px;color:#cfe9f2;line-height:1.7;
+  background:rgba(69,200,232,.07);border-left:3px solid var(--accent2);border-radius:0 12px 12px 0;
+}
+
+/* ---------- Previous / next ---------- */
+.nav-footer{display:flex;gap:12px;margin-top:20px}
+.nav-footer button{
+  flex:1;padding:12px 16px;text-align:left;cursor:pointer;
+  border:1px solid var(--line);border-radius:12px;background:var(--panel);
+}
+.nav-footer button:last-child{text-align:right}
+.nav-footer button:hover:not(:disabled){background:rgba(117,103,255,.1);border-color:rgba(117,103,255,.42)}
+.nav-footer button:disabled{opacity:.35;cursor:not-allowed}
+.nav-footer small{display:block;color:var(--muted);font-size:11px}
+.nav-footer strong{font-size:14px}
+
+.error{padding:20px;border:1px solid rgba(255,120,120,.4);border-radius:12px;background:rgba(255,120,120,.08)}
+
+/* ---------- Mobile ---------- */
+@media(max-width:850px){
+  header{padding:0 16px}
+  .layout{grid-template-columns:1fr}
+  .menu-btn{display:grid}
+  nav{position:fixed;z-index:40;left:-320px;width:300px;transition:left .25s;box-shadow:20px 0 60px rgba(0,0,0,.35)}
+  nav.open{left:0}
+  main{padding:20px 16px 40px}
+  .topic-title{font-size:28px;padding:23px 20px}
+  .explain{padding:22px 18px}
+  .nav-footer{flex-direction:column}
+  pre{font-size:13px;padding:16px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important}
+  html{scroll-behavior:auto}
+}

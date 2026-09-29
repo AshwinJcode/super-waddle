@@ -1,0 +1,564 @@
+{
+  "topics": [
+    {
+      "id": "first-code-in-java",
+      "title": "First Code In Java",
+      "summary": "",
+      "code": {
+        "filename": "FirstCodeInJava.java",
+        "language": "java",
+        "text": "System.out.println(\"Hello, World!\");"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "1. Check the Java version"
+        },
+        {
+          "type": "text",
+          "text": "Open the terminal in VS Code: click the `+` icon and select Open Terminal."
+        },
+        {
+          "type": "heading",
+          "text": "2. Check the Java and Javac versions"
+        },
+        {
+          "type": "text",
+          "text": "Type these two commands:"
+        },
+        {
+          "type": "text",
+          "text": "`java -version`"
+        },
+        {
+          "type": "text",
+          "text": "`javac -version`"
+        },
+        {
+          "type": "text",
+          "text": "Make sure you have Java 17, which is an LTS (long-term support) version."
+        },
+        {
+          "type": "heading",
+          "text": "3. Create a new file"
+        },
+        {
+          "type": "text",
+          "text": "Name the file `Hello.java`. Just as we use `.js` for JavaScript and `.c` for C, Java files use the `.java` extension."
+        },
+        {
+          "type": "heading",
+          "text": "4. Write the code"
+        },
+        {
+          "type": "text",
+          "text": "To print \"Hello, World!\" in a Java file you need at least 3-4 lines of code, because Java is a structured language."
+        },
+        {
+          "type": "text",
+          "text": "From Java 9 onward there is JShell, built for beginners to try out syntax. With JShell you can print it in a single line."
+        },
+        {
+          "type": "heading",
+          "text": "5. Use JShell"
+        },
+        {
+          "type": "text",
+          "text": "Open the terminal in VS Code (click `+`, then Open Terminal) and type `jshell`."
+        },
+        {
+          "type": "heading",
+          "text": "6. Run the command in JShell"
+        },
+        {
+          "type": "text",
+          "text": "`System.out.println(\"Hello, World!\");`"
+        },
+        {
+          "type": "text",
+          "text": "Text inside the parentheses must be in double quotes. Numbers are written as they are."
+        },
+        {
+          "type": "text",
+          "text": "Press Enter and the console displays Hello, World!"
+        },
+        {
+          "type": "heading",
+          "text": "7. Running it in a Java file"
+        },
+        {
+          "type": "text",
+          "text": "If you compile and run this single line inside a `.java` file, it will give errors. We will explore those errors and what they mean in the next chapter."
+        }
+      ],
+      "pages": "1-2"
+    },
+    {
+      "id": "how-java-works",
+      "title": "How Java Works",
+      "summary": "",
+      "code": {
+        "filename": "HowJavaWorks.java",
+        "language": "java",
+        "text": "public class Hello{\npublic static void main(String[]args) {\nSystem.out.print(\"helloworld\");\n}\n}"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "When we write a Java program, we typically use tools like JShell to test our code. However, running a complete program requires understanding the role of the Java Virtual Machine (JVM) and the Java Runtime Environment (JRE). Let's delve into how JVM operates and the control flow of a Java program."
+        },
+        {
+          "type": "text",
+          "text": "The Role of JVM The JVM is an integral part of the Java ecosystem, allowing Java code to be executed on any platform. Each operating system (OS) has a specific JVM designed for it, making Java platform-independent at the source code level but platform-dependent at the binary level. Diagram Control Flow of Java Code Java code undergoes several stages from writing to execution. Here’s a step-by-step breakdown of the process"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Writing Code: Java code is written in simple, understandable English terms.",
+            "Compilation: The Java compiler converts the source code (.java files) into bytecode (.class files).",
+            "Execution by JVM: The JVM executes the bytecode. It specifically looks for the main method as the entry point for any Java program."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Main Method"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The main method has a specific signature: public static void main (String[] args) {}.",
+            "This method is crucial as it marks the starting point of program execution. Steps to Write and Execute Java Code Layers 1. Write the Code: Ensure all executable code is within the main method. 2. Follow OOP Principles: Java is object-oriented; thus, everything is treated as an object, and classes act as blueprints. 3. Compile the Code: Use the Java compiler to compile your code.",
+            "This generates a .class file containing bytecode."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "4. Run the Code: Use the java command followed by the class name (without the .class extension) to run your program. public class Hello{ public static void main(String[]args) { System.out.print(\"helloworld\"); } } Understanding JRE The JRE is essential for running Java programs. It includes the JVM and a set of libraries and other files that the JVM uses at runtime. Think of JRE as a kitchen"
+        },
+        {
+          "type": "heading",
+          "text": "Kitchen Analogy"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The kitchen provides the environment to cook a dish.",
+            "Utensils and Ingredients are like the libraries and resources JRE provides."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Suppose you want to bake a cake. The JRE is like the entire kitchen setup needed for baking, including the oven, mixing bowls, and ingredients. The JVM is the oven that actually bakes the cake using the ingredients (bytecode) provided. Visualizing Java Architecture"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Imagine the Java development environment as nested boxes"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Outer Box (JDK): The Java Development Kit includes everything for development.",
+            "Middle Box (JRE): The JRE provides the runtime environment.",
+            "Innermost Box (JVM): The JVM interprets and executes the bytecode."
+          ]
+        }
+      ],
+      "pages": "3-5"
+    },
+    {
+      "id": "variables",
+      "title": "Variables",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Recap"
+        },
+        {
+          "type": "text",
+          "text": "In the previous chapter, we learned about the control flow of code execution, focusing on the concepts of JDK, JRE, and JVM and their importance. We used JDK 17, which is a Long- Term Support (LTS) version. It's important to note that a new version of the JDK is released every six months, each bringing new features and improvements."
+        },
+        {
+          "type": "heading",
+          "text": "Variables"
+        },
+        {
+          "type": "text",
+          "text": "Why do we build applications? Why do we code? These questions often arise, and the answer is simple: to solve real-world problems. For example, Amazon provides a convenient way to shop without visiting physical stores, and food delivery apps let us order meals without going to restaurants. All these applications rely on large amounts of data to function effectively."
+        },
+        {
+          "type": "text",
+          "text": "This data is processed and stored in a persistent storage system called a database, where it can be retrieved and updated as needed. During data processing, we need to store data temporarily;"
+        },
+        {
+          "type": "text",
+          "text": "this is where variables come in. Variables act as containers that temporarily hold data while we perform operations on it. Data can come in various forms, such as text, whole numbers, integers, or decimals. To manage these different types of data, we use specific data types for our variables. For instance"
+        },
+        {
+          "type": "list",
+          "items": [
+            "An integer like 8 is represented by the int data type.",
+            "Text data is represented using the String data type. According to the image, as we can see, variables x, y, z, and q are the boxes that hold the data inside it."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Code Example"
+        },
+        {
+          "type": "text",
+          "text": "Let's consider a simple example where we use two numbers and perform addition:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Let num1 be the first variable with a value of 8, and num2 the second variable with a value of 5. Both are of the int data type.",
+            "To store the result of their addition, we use another variable called result, which is also of int dataype. Each time we modify our code, we must compile it before running the program. This step is crucial because it converts our code into bytecode, which the Java Virtual Machine (JVM) executes. Changes in the code affect the bytecode, which can alter the program's output."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Although we could directly use numbers in our operations, using variables allows us to store and manipulate data dynamically, making our code more flexible and maintainable. Creating variables in Java When we create variables in Java, there are a few key steps to follow:"
+        },
+        {
+          "type": "heading",
+          "text": "1. Specify the data type"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The first step in creating a variable is to define its data type. The data type determines what kind of data the variable can hold (e.g., int for integers, double for decimals, char for characters)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. Give the variable a name"
+        },
+        {
+          "type": "list",
+          "items": [
+            "After specifying the data type, assign a suitable name to the variable. The name should be meaningful and follow Java’s naming conventions (e.g., camelCase for variable names)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Assign a value"
+        },
+        {
+          "type": "text",
+          "text": "You can assign a value to the variable at the time of creation by using the assignment operator =. This step is known as initialization. For example int number = 10; Alternatively, you can declare the variable without assigning a value. In this case, the variable will hold a default value, depending on its data type. For example: int number;"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Here, number will be initialized with a default value of 0."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "4. Default Values"
+        },
+        {
+          "type": "list",
+          "items": [
+            "If you choose not to assign a value during variable declaration, Java automatically assigns a default value based on the data type",
+            "int: 0",
+            "double: 0.0",
+            "char: '\\u0000' (null character)",
+            "boolean: false",
+            "Objects (e.g., Strings): null"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Steps to Remember While Coding"
+        },
+        {
+          "type": "text",
+          "text": "1. Use semicolons correctly: Ensure each statement ends with a semicolon to avoid syntax errors."
+        },
+        {
+          "type": "text",
+          "text": "2. Correct Use of Curly Braces ({}): Curly braces define code blocks. Missing braces can prevent your code from compiling successfully. 3. Proper Indentation: Indentation makes your code more readable and easier to understand for others. It also helps in visualizing the structure and flow of the code."
+        }
+      ],
+      "pages": "6-8"
+    },
+    {
+      "id": "data-types",
+      "title": "Data Types",
+      "summary": "",
+      "code": {
+        "filename": "DataTypes.java",
+        "language": "java",
+        "text": "byte b = 100;\nshort s = 3000;\nint i = 123489;\nlong l = 123456789L;\nfloat f = 3.14f;\ndouble d = 3.14159;\nchar c = 'A';\nboolean flag = true;"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In Java, data is stored in variables, which can have different data types. Data Types"
+        },
+        {
+          "type": "heading",
+          "text": "Data types in Java are divided into two main categories"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Primitive Data Types",
+            "Non-Primitive Data Types (to be discussed in upcoming chapters) Primitive data types: Primitive data types in Java are the foundational building blocks of data manipulation. Unlike more complex data structures, they represent simple values such as a single number or character. Java offers eight primitive types: byte, short, int, long, float, double, char, and boolean and it can be further classified into the following sub-categories",
+            "Integer types",
+            "Floating-point types",
+            "Character type",
+            "Boolean type Detailed Breakdown of Primitive Data Types 1. Integer The integer data types are used for storing whole numbers, which include natural numbers, zeros, and negative numbers. Different integer data types are available based on the range and size required"
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "byte: 1 byte (8 bits), range: -128 to 127",
+            "short: 2 bytes (16 bits), range: -32,768 to 32,767",
+            "int: 4 bytes (32 bits), range: -2^31 to 2^31 - 1",
+            "long: 8 bytes (64 bits), range: -2^63 to 2^63 - 1 (use an 'L' suffix to specify a long literal, e.g., 123456789L) 2. Character The char type is used to store a single character, such as a letter, digit, or symbol, enclosed in single quotes (e.g., 'A'). It has a size of 2 bytes (16 bits) because Java uses the Unicode standard, which accommodates a broader range of characters compared to ASCII. 3. Boolean The boolean type represents a truth value and can hold only two possible values: true or false. It is primarily used in conditional statements. Unlike some other programming languages that might represent boolean values with 0 and 1, Java strictly uses the keywords true and false. This means that in Java, you cannot use integers to represent boolean values—only true or false are valid. In Java, the boolean data type is unique compared to languages that might allow numerical representations (like 0 for false and 1 for true). Java does not support 0 and 1 as boolean values. The boolean data type strictly allows only two values",
+            "true",
+            "false This design decision helps prevent logical errors and ensures that conditions in your code are clear and unambiguous. 4. Float and Double These data types are used for storing decimal or floating-point numbers:",
+            "float: 4 bytes, single-precision, range approximately ±3.40282347E+38F (use 'f' suffix, e.g., 3.14f)",
+            "double: 8 bytes, double-precision, range approximately ±1.79769313486231570E+308 (default for decimal numbers) Sizes and Ranges of Primitive Data Types Data Type Size Range"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "byte 1 byte -128 to 127 byte b = 100; short 2 bytes -32,768 to 32,767 short s = 3000; int 4 bytes -2^31 to 2^31 - 1 int i = 123489; long 8 bytes -2^63 to 2^63 - 1 long l = 123456789L; Data Type Size Range"
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "float 4 bytes ±3.40282347E+38F float f = 3.14f; double 8 bytes ±1.79769313486231570E+308 double d = 3.14159; char 2 bytes 0 to 65,535 (Unicode) char c = 'A'; boolean 1 bit true or false boolean flag = true;"
+        },
+        {
+          "type": "heading",
+          "text": "Code"
+        },
+        {
+          "type": "list",
+          "items": [
+            "This Java program demonstrates the declaration and initialization of various primitive data types, including `int`, `byte`, `short`, `long`, `float`, `double`, `char`, and `boolean`. Each variable is assigned a specific value to illustrate how these data types can be used in Java."
+          ]
+        }
+      ],
+      "pages": "9-11"
+    },
+    {
+      "id": "literals",
+      "title": "Literals",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "in Java Literals in Java represent fixed values directly in the source code. They are constants that can be assigned to variables and come in various types. Types of Literals in Java Java supports several types of literals, including"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Integer Literals",
+            "Character Literals",
+            "Boolean Literals",
+            "String Literals",
+            "Floating Point Literals Detailed Explanation of Each Literal Type 1. Integer Literals Integer literals represent whole numbers and can be expressed in four different number systems"
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Decimal (Base 10): Uses digits 0-9. int decimal = 101; // Decimal literal",
+            "Octal (Base 8): Uses digits 0-7, prefixed with 0. int octal = 0146; // Octal literal (equals 102 in decimal)",
+            "Hexadecimal (Base 16): Uses digits 0-9 and letters a-f (or A-F), prefixed with 0x or 0X. int hex = 0x123Face; // Hexadecimal literal",
+            "Binary (Base 2): Uses digits 0 and 1, prefixed with 0b or 0B. int binary = 0b1111; // Binary literal (equals 15 in decimal) 2. Character Literals Character literals are single characters enclosed in single quotes. They can also represent special characters using escape sequences. char letter = 'a'; char symbol = '%'; char unicodeChar = '\\u000d'; // Unicode representation 3. Boolean Literals Boolean literals represent truth values and can only be true or false. boolean isJavaFun = true; boolean isFishMammal = false; 4. String Literals String literals are sequences of characters enclosed in double quotes. String name = \"Jack\"; String number = \"12345\"; String newLine = \"\\n\"; // Newline character 5. Floating Point Literals Floating point literals represent numbers with fractional parts and can be of type float or double.",
+            "Float Literals: Ends with F or f. float price = 19.99f;",
+            "Double Literals: Ends with D or d (optional). double weight = 65.7; double scientific = 1.234e2; // Exponent notation Invalid Literals and Restrictions Using underscores in numeric literals can enhance readability, but there are restrictions",
+            "Cannot start or end a number with an underscore.",
+            "Cannot place an underscore adjacent to a decimal point in a floating-point literal.",
+            "Cannot place an underscore adjacent to F or L suffixes."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Invalid Examples"
+        },
+        {
+          "type": "text",
+          "text": "int invalid = 77_; // Invalid: underscore at the end float invalidFloat = 6_.674F; // Invalid: underscore before decimal"
+        },
+        {
+          "type": "heading",
+          "text": "Why Use Literals?"
+        },
+        {
+          "type": "text",
+          "text": "Literals are used to directly assign values to variables without needing to define constants separately. They simplify code by embedding constant values within the instructions."
+        },
+        {
+          "type": "heading",
+          "text": "FAQs on Literals"
+        },
+        {
+          "type": "text",
+          "text": "1. What are literals in Java?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Literals are fixed values assigned directly to variables in the source code. 2. Can literals be changed during program execution?",
+            "No, literals are constants and cannot be changed once defined. 3. What is a real literal?",
+            "Real literals represent floating-point numbers, like 12.34 or 1.23e3. 4. What is a null literal?",
+            "A null literal represents the absence of an object reference, commonly assigned as null."
+          ]
+        }
+      ],
+      "pages": "12-15"
+    },
+    {
+      "id": "type-conversion-and-casting",
+      "title": "Type Conversion & Casting",
+      "summary": "",
+      "code": {
+        "filename": "TypeConversionCasting.java",
+        "language": "java",
+        "text": "byte b = 127;\nint a = 256;\nb = a; // This line will cause a compilation error.\nint a = b;\nbyte b = 127;\nint a = 257;\nb = (byte) a;"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Type Conversion (Implicit Conversion) Type conversion, also known as implicit conversion or widening conversion, occurs automatically when"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A smaller data type is assigned to a larger data type.",
+            "The conversion is between compatible data types."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Characteristics"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Performed automatically by the compiler",
+            "No data loss occurs.",
+            "The destination type is always larger than the source type."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "When storing data, we use variables of various data types, such as boolean, int, float, byte, or short. But can we change the type of a variable? Let's explore this with an example byte b = 127; int a = 256; b = a; // This line will cause a compilation error. In the above example, we're trying to assign an int value to a byte variable. Since int can hold a larger range of values than byte, the compiler will generate an error because this assignment may lead to data loss."
+        },
+        {
+          "type": "heading",
+          "text": "However, if we reverse the assignment"
+        },
+        {
+          "type": "text",
+          "text": "int a = b; This is allowed because we're storing a byte value in an int variable, which has a larger range. This type of conversion, where a smaller type is converted to a larger type, is called implicit type conversion or widening. The compiler handles these conversions automatically."
+        },
+        {
+          "type": "text",
+          "text": "Type Casting (Explicit Conversion) Type casting, also known as explicit conversion or narrowing conversion, is performed manually by the programmer when"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A larger data type needs to be assigned to a smaller data type.",
+            "The conversion may result in data loss."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Characteristics"
+        },
+        {
+          "type": "list",
+          "items": [
+            "requires explicit use of the casting operator",
+            "Can be applied to both compatible and incompatible data types.",
+            "May result in data loss or unexpected results"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Code Example"
+        },
+        {
+          "type": "text",
+          "text": "Step 1: Declare and initialize a byte variable byte b = 127; b is initialized with the maximum value a byte can hold, which is 127. Step 2: Declare and initialize an int variable int a = 257; a is an int variable initialized with 257. Step 3: Cast int to byte using modulo operation b = (byte) a; Here, you assign a to b by casting."
+        },
+        {
+          "type": "text",
+          "text": "The byte data type has a range from -128 to 127 (which is a total of 256 different values). Now, when you cast a to a byte, Java calculates the equivalent value within the byte range using the modulo operation"
+        },
+        {
+          "type": "text",
+          "text": "This explicit conversion is known as casting or narrowing, where we manually convert a larger data type to a smaller one."
+        },
+        {
+          "type": "heading",
+          "text": "Modulo Calculation"
+        },
+        {
+          "type": "text",
+          "text": "257 % 256 = 1"
+        },
+        {
+          "type": "heading",
+          "text": "After complete code execution, our output window displays"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Automatic promotion in Java is a feature that automatically converts smaller data types to larger data types when they are used in expressions or method calls. This conversion ensures that all operands in an expression or arguments in a method call are of compatible types, allowing the operation to be performed successfully."
+        },
+        {
+          "type": "heading",
+          "text": "Type Promotion"
+        },
+        {
+          "type": "text",
+          "text": "Type promotion refers to the process where a smaller data type is automatically converted to a larger data type. For instance, an int can be promoted to a long, float, double, and so on. The JVM performs this automatic type promotion when a method that requires a larger data type is called with a smaller data type argument."
+        },
+        {
+          "type": "heading",
+          "text": "Code explanation"
+        },
+        {
+          "type": "text",
+          "text": "The program calculates the product of a and b using a * b. Although both a and b are byte types, the result is automatically promoted to an int type because in Java, arithmetic operations involving bytes result in an integer value. This is why the result is stored in an int variable named result."
+        }
+      ],
+      "pages": "16-19"
+    }
+  ]
+}

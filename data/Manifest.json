@@ -1,0 +1,44 @@
+{
+  "sections": [
+    {
+      "id": "java-fundamentals",
+      "title": "01. Java Fundamentals",
+      "file": "data/01-java-fundamentals.json"
+    },
+    {
+      "id": "operators-and-conditional-statements",
+      "title": "02. Operators & Conditional Statements",
+      "file": "data/02-operators-and-conditional-statements.json"
+    },
+    {
+      "id": "loops",
+      "title": "03. Loops",
+      "file": "data/03-loops.json"
+    },
+    {
+      "id": "oop-foundations-arrays-and-strings",
+      "title": "04. OOP Foundations, Arrays & Strings",
+      "file": "data/04-oop-foundations-arrays-and-strings.json"
+    },
+    {
+      "id": "encapsulation-and-class-features",
+      "title": "05. Encapsulation & Class Features",
+      "file": "data/05-encapsulation-and-class-features.json"
+    },
+    {
+      "id": "inheritance-access-and-polymorphism",
+      "title": "06. Inheritance, Access & Polymorphism",
+      "file": "data/06-inheritance-access-and-polymorphism.json"
+    },
+    {
+      "id": "packages-wrappers-abstract-and-inner-classes",
+      "title": "07. Packages, Wrappers, Abstract & Inner Classes",
+      "file": "data/07-packages-wrappers-abstract-and-inner-classes.json"
+    },
+    {
+      "id": "interfaces-and-enums",
+      "title": "08. Interfaces & Enums",
+      "file": "data/08-interfaces-and-enums.json"
+    }
+  ]
+}

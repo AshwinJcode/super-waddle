@@ -1,0 +1,929 @@
+{
+  "topics": [
+    {
+      "id": "encapsulation",
+      "title": "Encapsulation",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What is Encapsulation? Encapsulation is a fundamental concept in object-oriented programming (OOP) in Java. It involves hiding the internal details of an object and exposing only the necessary parts to the outside world. This is achieved by"
+        },
+        {
+          "type": "text",
+          "text": "Declaring the class variables as private, which makes them accessible only within the class. Providing public methods (getters and setters) to access and modify these private variables."
+        },
+        {
+          "type": "heading",
+          "text": "Analogy"
+        },
+        {
+          "type": "text",
+          "text": "Imagine a medicine capsule . The internal ingredients are hidden from view. Similarly, encapsulation hides the internal state of an object and only exposes certain methods to interact with that state. Advantages of Encapsulation"
+        },
+        {
+          "type": "heading",
+          "text": "1. Data Hiding"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Hides the internal implementation details from the user.",
+            "Users can interact with the object through public methods without knowing the internal workings."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. Increased Flexibility"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Variables can be made read-only or write-only depending on needs.",
+            "For example, omitting setter methods makes variables read-only."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Reusability"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Encourages code reusability and makes it easier to update and maintain."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "4. Easier Testing"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Encapsulated code is easier to test and debug, especially in unit testing."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "5. Freedom for Programmers"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Programmers can change the internal implementation without affecting external code, as long as the public interface remains the same. Disadvantages of Encapsulation"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "1. Increased Complexity"
+        },
+        {
+          "type": "list",
+          "items": [
+            "May add complexity, especially if not implemented properly."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. Understanding Difficulty"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Can make the system harder to understand for others who are reading or maintaining the code."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Limited Flexibility"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Can limit flexibility in certain scenarios where direct access to internal data might be beneficial."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example 1: Basic Encapsulation"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "Private Variables: name and mobNo are private, so they cannot be accessed directly from outside the Human class. Getter Methods: getName() and getMobNo() are used to retrieve these values. Show Method: Uses the getter methods to display the private data."
+        },
+        {
+          "type": "heading",
+          "text": "Example 2: Using Setters"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "Setter Methods: setName() and setMobNo() allow changing the private variables. Updated Values: The main method demonstrates setting new values for name and mobNo and then retrieving and displaying these values."
+        },
+        {
+          "type": "heading",
+          "text": "Summary"
+        },
+        {
+          "type": "text",
+          "text": "Encapsulation is crucial for protecting the internal state of an object and providing a controlled way of accessing and modifying that state. By using private variables and public getter and setter methods, you can control how data is accessed and updated, which enhances the flexibility, reusability, and maintainability of your code."
+        }
+      ],
+      "pages": "106-110"
+    },
+    {
+      "id": "getters-and-setters",
+      "title": "Getters & Setters",
+      "summary": "",
+      "code": {
+        "filename": "GettersSetters.java",
+        "language": "java",
+        "text": "public class Person {\nprivate String name; // private = restricted access\n// Getter\npublic String getName() {\nreturn name;\n}\n// Setter\npublic void setName(String newName) {\nthis.name = newName;\n}\n}\npublic class Vehicle {\nprivate String color;\n// Getter\npublic String getColor() {\nreturn color;\n}\n// Setter\npublic void setColor(String c) {\nthis.color = c;\n}\n}"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In Java, Getters and Setters are special methods used to access and modify private variables within a class. Since private variables are only accessible within the class they are declared, outside classes cannot directly access them. However, by providing public getter and setter methods, you can control how these variables are accessed and modified."
+        },
+        {
+          "type": "heading",
+          "text": "Why Use Getters and Setters?"
+        },
+        {
+          "type": "text",
+          "text": "Encapsulation: Getters and setters allow you to encapsulate the data within your class. This means that the internal representation of an object is hidden from the outside world, and access to this data is controlled."
+        },
+        {
+          "type": "text",
+          "text": "Data Protection: By using getters and setters, you can ensure that the data is only accessed or modified in a controlled manner, preventing unauthorized access or changes. Code Maintainability: If the internal structure of the class changes, you can modify the getter and setter methods without changing the code that uses the class."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax"
+        },
+        {
+          "type": "text",
+          "text": "Both getter and setter methods start with either get or set, followed by the name of the variable with the first letter capitalized."
+        },
+        {
+          "type": "text",
+          "text": "The getter method returns the value of the variable, while the setter method assigns a new value to the variable. public class Person { private String name; // private = restricted access // Getter public String getName() { return name; } // Setter public void setName(String newName) { this.name = newName; } } How Getters and Setters Work Getter in Java: A getter method, also known as an accessor, is used to retrieve the value of a private variable. The method returns the value of the variable, which could be of any data type like int, String, double, float, etc. The method name conventionally starts with \"get\" followed by the capitalized variable name. Setter in Java: A setter method, also known as a mutator, is used to update the value of a private variable. The method sets the value of the variable and conventionally starts with \"set\" followed by the capitalized variable name."
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "Here’s an example using a Vehicle class to demonstrate getters and setters: public class Vehicle { private String color; // Getter public String getColor() { return color; } // Setter public void setColor(String c) { this.color = c; } }"
+        },
+        {
+          "type": "heading",
+          "text": "In this example"
+        },
+        {
+          "type": "text",
+          "text": "The getColor method returns the value of the color variable. The setColor method sets the value of the color variable. Using Getters and Setters in IDEs Most modern Integrated Development Environments (IDEs) provide built-in support for generating getters and setters. This can save you time and ensure that the methods follow best practices."
+        },
+        {
+          "type": "text",
+          "text": "You can select the variables you want to generate methods for, and the IDE will create the code for you. Important Considerations Not Mandatory: While it's a common practice to name these methods as get and set, it's not a strict requirement. You can name them anything, but following conventions makes the code more readable and understandable to other developers. Flexibility: Getters and setters offer flexibility in controlling how the variables are accessed and modified. For example, you can add validation logic in a setter to ensure that only valid data is assigned to a variable."
+        }
+      ],
+      "pages": "111-115"
+    },
+    {
+      "id": "this-keyword",
+      "title": "this Keyword",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The ‘this’ Keyword in Java In Java, the ‘this’ keyword is a reference variable that refers to the current object, meaning it points to the object instance on which the method or constructor is being invoked. It can be used in various ways to improve code readability and avoid naming conflicts between local variables and instance variables."
+        },
+        {
+          "type": "heading",
+          "text": "Key Uses of this Keyword"
+        },
+        {
+          "type": "heading",
+          "text": "1. Refer to Current Class Instance Variables"
+        },
+        {
+          "type": "list",
+          "items": [
+            "When a local variable and an instance variable have the same name, this helps to differentiate between them."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. Invoke Current Class Methods"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You can use this to call another method of the current class."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Return the Current Class Instance"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Useful in method chaining or builder pattern."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "4. Pass the Current Class Instance as a Parameter"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You can pass the current object as an argument in a method or constructor."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example Code"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation of the Code"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Class Human: This class has two private instance variables, age and name. It also has getter and setter methods.",
+            "setAge(int age) and setName(String name) Methods: The this keyword is used to assign the method's local variables (age and name) to the instance variables of the same name.",
+            "Class Demo: This class creates an instance of the Human class, sets values using setters, and retrieves them using getters."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "If we did not use this in the setter methods, the instance variables would not be correctly assigned, leading to potential bugs or unexpected results."
+        },
+        {
+          "type": "heading",
+          "text": "Methods to Use this in Java"
+        },
+        {
+          "type": "heading",
+          "text": "1. Using this to Refer to Current Class Instance Variables"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Differentiates between local and instance variables when they share the same name."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. Using this to Invoke Current Class Methods"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Calls another method in the same class."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Using this to Return the Current Class Instance"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Facilitates method chaining."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "4. Using this as a Method Parameter"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Passes the current object as an argument to another method or constructor."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Disadvantages of Using this"
+        },
+        {
+          "type": "heading",
+          "text": "1. Overuse Can Reduce Code Readability"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Excessive use may clutter the code and make it harder to follow."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. Unnecessary Overhead"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Using this when not needed can add unnecessary complexity."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Cannot Use this in Static Context"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The ‘this’ keyword cannot be used in a static method because static methods belong to the class, not any specific object."
+          ]
+        }
+      ],
+      "pages": "116-118"
+    },
+    {
+      "id": "constructors",
+      "title": "Constructors",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Introduction"
+        },
+        {
+          "type": "text",
+          "text": "In Java, a constructor is a special method used to initialize objects. The constructor is automatically called when an object of a class is created. It can be used to set initial values for object attributes, ensuring that an object is in a consistent state right from the moment it is created. Understanding Constructors"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Constructor vs. Method: Although a constructor is similar to a method, it differs in several ways",
+            "A constructor must have the same name as the class.",
+            "Constructors do not have a return type, not even void.",
+            "A constructor is called only once when an object is created, whereas methods can be called multiple times. How Constructors Work When you create an object in Java using the new keyword, the constructor is called to initialize the object. If no constructor is explicitly defined in a class, Java provides a default constructor that initializes the object with default values. In this example, when the Human object is created, the constructor is called, and the instance variables age and name are initialized with default values."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Why Use Constructors?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Avoid Default Values: Without a constructor, instance variables might take default values (null for strings, 0 for integers), which may not be desired. Using a constructor, you can ensure that your object is initialized with meaningful values.",
+            "Custom Initialization: Constructors allow you to set up an object exactly how you want it right when it's created. Types of Constructors in Java"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Java supports two main types of constructors"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Default Constructor: Provided automatically if no constructor is defined. Initializes object with default values.",
+            "Parameterized Constructor: Allows passing parameters to assign custom values during object creation.",
+            "Constructor vs. Method - A Quick Comparis Feature Constructor Method Purpose Initializes the state of an object Exposes the behavior of an object Return Type None Must have a return type or void Invocation Implicitly invoked during object creation Explicitly invoked using an object"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Provided by Compiler Yes, if no constructor is defined No Name Same as the class name Can be any valid identifier"
+        },
+        {
+          "type": "heading",
+          "text": "FAQs on Java Constructors"
+        },
+        {
+          "type": "text",
+          "text": "1. What is a constructor in Java?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A constructor in Java is a special method used to initialize objects. 2. Can a Java constructor be private?",
+            "Yes, a constructor can be declared private, usually to restrict object creation from outside the class. 3. Can a constructor be static, final, or abstract?",
+            "No, a constructor cannot be static, final, or abstract because constructors are meant to initialize instances, and these modifiers conflict with the purpose of a constructor. 4. Why can't we override constructors in Java?",
+            "Constructors are not inherited, so they cannot be overridden. Overriding applies to methods that are inherited by subclasses. 5. Is it mandatory to define a constructor in a class?",
+            "No, it’s not mandatory. If you don’t define any constructor, the Java compiler provides a default constructor. In Java, constructors are special methods used to initialize objects. When an object of a class is created, the constructor is automatically called. Constructors can either set default values or accept parameters to set custom values for object attributes."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Types of Constructors in Java"
+        },
+        {
+          "type": "heading",
+          "text": "Constructors in Java can be broadly categorized into two types"
+        },
+        {
+          "type": "heading",
+          "text": "1. Default Constructor"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A constructor that has no parameters.",
+            "It is automatically provided by the Java compiler if no constructor is explicitly defined."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Syntax"
+        },
+        {
+          "type": "text",
+          "text": "<class_name>() {}"
+        },
+        {
+          "type": "list",
+          "items": [
+            "If a class has no constructors, the compiler automatically creates a default constructor."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. Parameterized Constructor"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A constructor that accepts parameters to initialize an object with specific values.",
+            "Allows for greater flexibility in object creation."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "public Human(int age, String name) { this.age = age; this.name = name; } Key Differences Between Default and Parameterized Constructors"
+        },
+        {
+          "type": "heading",
+          "text": "Default Constructor"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Has no parameters.",
+            "Provides default values to object attributes.",
+            "Automatically generated by the compiler if not explicitly defined."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Parameterized Constructor"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Accepts arguments to initialize object attributes with specific values.",
+            "Must be explicitly defined by the programmer."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example: Default Constructor"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "In this example, every time an object of the Human class is created using the default constructor, the same default values (age = 12, name = \"John\") are assigned to the object's attributes."
+        },
+        {
+          "type": "heading",
+          "text": "Example: Parameterized Constructor"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Here, the default constructor assigns values for obj, while the parameterized constructor allows different values to be assigned to obj1. Additional FAQs on Java Constructors 1. What happens if I define a constructor with parameters and no default constructor?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "If you define a parameterized constructor and omit the default constructor, the compiler will not provide a default constructor. Therefore, attempting to create an object without arguments will result in a compile-time error. 2. Can a constructor be private?",
+            "Yes, a constructor can be private. This is often used in the Singleton design pattern to restrict object creation and ensure only one instance of a class exists. 3. Can constructors be overloaded in Java?",
+            "Yes, constructors can be overloaded by defining multiple constructors with different parameter lists within the same class. 4. Why do we need a parameterized constructor?",
+            "A parameterized constructor is useful when you want to create objects with different initial values, providing more control over object creation."
+          ]
+        }
+      ],
+      "pages": "119-125"
+    },
+    {
+      "id": "static-variable",
+      "title": "Static Variable",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What is a Static Variable? The static keyword in Java is primarily used for memory management. It can be applied to variables, methods, blocks, and nested classes. The static keyword belongs to the class itself rather than to instances of the class, meaning it’s shared across all instances."
+        },
+        {
+          "type": "heading",
+          "text": "The static keyword can be used with"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Variable (also known as a class variable)",
+            "Method (also known as a class method)",
+            "Block",
+            "Nested class Java Static Variable When you declare a variable as static, it is known as a static variable. A static variable is used to refer to the common property of all objects of a class (which is not unique for each object), such as the company name of employees, or the college name of students. The static variable gets memory only once in the class area, at the time of class loading."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Advantages of Static Variables"
+        },
+        {
+          "type": "text",
+          "text": "Memory Efficiency: It saves memory because static variables are allocated memory only once, and the memory is shared across all instances of the class."
+        },
+        {
+          "type": "heading",
+          "text": "Example: Understanding Static Variables"
+        },
+        {
+          "type": "text",
+          "text": "class Mob { String brand; int price; String name; public void show() { System.out.println(brand + \",\" + price + \",\" + name); } } class Demo { public static void main(String[] args) { Mob obj = new Mob(); Mob obj1 = new Mob(); obj.brand = \"Apple\"; obj.price = 1500; obj.name = \"SmartPhone\"; obj1.brand = \"Samsung\"; obj1.price = 1700; obj1.name = \"SmartPhone\"; obj.show(); obj1.show(); } }"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Apple, 1500, SmartPhone Samsung, 1700, SmartPhone In the example above, the name of the device is common for both objects. However, space is consumed each time the name is stored. Wouldn't it be better if we had a way to declare it once and have it remain common for all instances? Yes, we can achieve this by using the static keyword."
+        },
+        {
+          "type": "text",
+          "text": "Refactoring with Static Variables By declaring the name variable as static, it becomes a class variable, meaning memory will be allocated only once for it. When the class is loaded, memory is assigned to all static members of the class. If any variable is declared as static, its value will be shared by all objects of the class."
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "The static keyword ensures that the name variable is shared across all instances of the class. Therefore, when the name is changed for one object, it reflects for all objects. The correct way to access static members is by using the class name, as shown with Mob.name."
+        }
+      ],
+      "pages": "126-129"
+    },
+    {
+      "id": "static-method",
+      "title": "Static Method",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What is a Static Method? In Java, the static keyword is used to create methods that belong to the class rather than to instances of the class. This means that static methods can be called without creating an object of the class. Any method declared with the static keyword is referred to as a static method."
+        },
+        {
+          "type": "text",
+          "text": "Features of Static Methods Class-Level Method: A static method is associated with the class itself, not with any particular object instance. Access by All Instances: Every instance of a class can access a static method."
+        },
+        {
+          "type": "text",
+          "text": "No Need for Object Reference: Static methods can access static variables directly, without needing to refer to an instance of the class. Limited Access: A static method can only access other static data (static variables and static methods). It cannot access instance variables directly."
+        },
+        {
+          "type": "text",
+          "text": "Direct Access: Static methods can be accessed directly within both static and non- static methods."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax to Declare a Static Method"
+        },
+        {
+          "type": "text",
+          "text": "Access_modifier static void methodName() { // Method body }"
+        },
+        {
+          "type": "heading",
+          "text": "Example: Using Static Methods in a Class"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation of the Code"
+        },
+        {
+          "type": "command",
+          "text": "1. Instance Method (show())"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The show() method is an instance method and is called using an object (obj) of the Mobile class.",
+            "It can directly access instance variables (brand, price) and static variables (name)."
+          ]
+        },
+        {
+          "type": "command",
+          "text": "2. Static Method (show1())"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The show1() method is declared static. It can only directly access static variables (name).",
+            "To access instance variables (brand, price), we pass an object of the Mobile class reference as a parameter.",
+            "Inside show1(), we use the passed object (obj) to access the instance variables."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Main Method"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The main() method is also static. It is the entry point of the program and does not require an object of the class to be called.",
+            "The main() method creates an instance of Mobile, assigns values to its fields, and calls both the instance and static methods. Why is the Main Method in Java Static? The main() method is static because it is the entry point for the program. When the program starts, there is no object of the class available. If the main() method were non-static, the JVM would need to create an object of the class before it could call the method, which would create a circular dependency and deadlock like situation. Making the main() method static avoids this issue and allows the program to start without needing to create an object."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "FAQs"
+        },
+        {
+          "type": "text",
+          "text": "1. Can a static method access non-static variables?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "No, a static method cannot directly access non-static (instance) variables. It can only access them through an object reference. 2. Why do we need to pass an object to a static method?",
+            "We pass an object to a static method to access instance variables and instance methods. Static methods can only interact with static data directly. 3. Can we override static methods?",
+            "No, static methods cannot be overridden. However, they can be hidden by declaring a static method with the same name in a subclass."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "4. What happens if we remove the static keyword from the main() method?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "If you remove the static keyword from the main() method, the program will not run because the JVM will not have a valid entry point to start the program."
+          ]
+        }
+      ],
+      "pages": "130-132"
+    },
+    {
+      "id": "static-block",
+      "title": "Static Block",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What is a Static Block? A static block in Java is a block of code associated with the static keyword. This block is used for the static initialization of a class and is executed only once when the class is loaded into memory for the first time. Unlike other code blocks, a static block runs before any object of the class is created and even before the constructor is called."
+        },
+        {
+          "type": "heading",
+          "text": "Characteristics of a Static Block"
+        },
+        {
+          "type": "text",
+          "text": "Special Java Block: A static block is enclosed within {} and marked with the static keyword. The code inside this block executes once and is used to initialize static variables or perform startup tasks for the class. Initialization: The primary use of a static block is to initialize static variables or execute code that must run only once when the class is loaded."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax of a Static Block"
+        },
+        {
+          "type": "command",
+          "text": "static { // Initialization code or static variables }"
+        },
+        {
+          "type": "heading",
+          "text": "Example of a Static Block"
+        },
+        {
+          "type": "heading",
+          "text": "Let's look at an example to understand how a static block works"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation of the Code"
+        },
+        {
+          "type": "heading",
+          "text": "1. Class Declaration"
+        },
+        {
+          "type": "list",
+          "items": [
+            "class Mobile { ... }: This declares a class named Mobile. Inside this class, we define variables and methods that describe the characteristics and behaviors of a mobile phone."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2. Instance Variables"
+        },
+        {
+          "type": "list",
+          "items": [
+            "String brand; int price;: These are instance variables, meaning each object of the Mobile class will have its own copy of these variables.",
+            "static String name;: This is a static variable, meaning all objects of the Mobile class share the same value for this variable."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Constructor"
+        },
+        {
+          "type": "list",
+          "items": [
+            "public Mobile() { ... }: This is a constructor method that initializes instance variables. The constructor is called every time a new object of the class is created.",
+            "brand = \"\"; price = 200; name = \"Phone\";: These lines set default values for the instance variables when a new Mobile object is created."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "4. Static Block"
+        },
+        {
+          "type": "list",
+          "items": [
+            "static { ... }: This block is executed when the class is loaded into memory, before any objects are created.",
+            "name = \"Phone\"; System.out.println(\"In static block\");: This sets the static variable name and prints a message to the console."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "5. Instance Method"
+        },
+        {
+          "type": "list",
+          "items": [
+            "public void show() { ... }: This method displays the values of the brand, price, and name variables."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "6. Main Method"
+        },
+        {
+          "type": "list",
+          "items": [
+            "public static void main(String[] args) { ... }: This is the entry point of the program. Inside this method",
+            "Mobile obj = new Mobile();: A new Mobile object is created, which calls the constructor.",
+            "obj.brand = \"Apple\"; obj.price = 1500; Mobile.name = \"SmartPhone\";: The brand and price instance variables are updated for the obj object, and the static name variable is set for the class.",
+            "obj.show();: This calls the show() method to display the object's properties."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Output Explanation"
+        },
+        {
+          "type": "heading",
+          "text": "When you run this code, you'll see the following output"
+        },
+        {
+          "type": "text",
+          "text": "Static Block First: The message \"In static block\" is printed first because the static block runs as soon as the class is loaded, even before the constructor. Constructor Next: The message \"Inside constructor\" is printed next, as the constructor is called when the object obj is created."
+        },
+        {
+          "type": "text",
+          "text": "Show Method: Finally, the show() method prints the updated values of the instance and static variables. Understanding Static Block Execution Order Static Block Before Constructor: The static block runs before the constructor because it is associated with the class, not with individual objects. When the JVM loads the class into memory, it runs the static block to initialize any static variables. Class Loading Without Object Creation: If you want the static block to execute even without creating an object, you can force the class to load using Class.forName(\"Mobile\");. This method loads the class and triggers the static block without requiring object creation."
+        },
+        {
+          "type": "heading",
+          "text": "FAQs on Static Block"
+        },
+        {
+          "type": "text",
+          "text": "1. Q: What is a static block in Java?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A: A static block in Java is a block of code associated with the static keyword. It is used to initialize static variables or perform tasks that need to run once when the class is loaded into memory. 2. Q: When is the static block executed?",
+            "A: The static block is executed when the class is loaded into memory by the JVM, before any objects of the class are created and before the constructor is called. 3. Q: Can a class have multiple static blocks?",
+            "A: Yes, a class can have multiple static blocks. They are executed in the order they appear in the class. 4. Q: What is the purpose of using a static block?",
+            "A: The static block is primarily used to initialize static variables or execute code that should only run once when the class is loaded. 5. Q: How can you force a static block to execute without creating an object?",
+            "A: You can force the static block to execute by using Class.forName(\"ClassName\");. This method loads the class into memory and triggers the static block. 6. Q: Is a static block mandatory in a class?",
+            "A: No, a static block is not mandatory. It is used when necessary, typically for static variable initialization."
+          ]
+        }
+      ],
+      "pages": "133-136"
+    },
+    {
+      "id": "naming-conventions",
+      "title": "Naming Conventions",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In Java, it's considered acceptable practice to name classes, variables, and methods in a way that clearly describes their purpose. This approach, rather than using arbitrary names, helps improve the readability and maintainability of code."
+        },
+        {
+          "type": "text",
+          "text": "When naming these elements, Java developers typically follow CamelCase conventions, which involve capitalizing the first letter of each subsequent word in a compound word. Advantages of Naming Conventions in Java Readability: Well-named identifiers make the code easier to read and understand for both the author and others who may use it later. Maintenance: Clear naming reduces the time required to understand the code, making it easier to update and maintain. CamelCase Naming Conventions Classes and Interfaces: The first letter is uppercase. For example: Thread, Runnable, Reflection, Collections. Methods: Start with a lowercase letter, with subsequent words capitalized. For example: concat(), toString(), wait(), notify()."
+        },
+        {
+          "type": "text",
+          "text": "Constants: Written in all uppercase letters, often with words separated by underscores. For example: PIE, SUNDAY, MAX_VALUE. Popular Naming Conventions"
+        }
+      ],
+      "pages": "137-138"
+    },
+    {
+      "id": "anonymous-object",
+      "title": "Anonymous Object",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Anonymous Object in Java Object Creation: The Traditional Way In Java, the traditional way of creating an object involves two main steps:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Declaration of an Object Reference: First, you declare a reference variable that will point to the object.",
+            "Object Creation: Then, you use the new keyword to create the object in the heap memory and assign it to the reference variable. This approach involves allocating memory in both the stack (for the reference variable) and the heap (for the actual object)."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "text",
+          "text": "Anonymous Object in Java But what if you want to create an object without allocating space in the stack for the reference variable? Can you directly use an object without assigning it a name or reference? Yes, you can create such an object, known as an Anonymous Object. An anonymous object is created without a reference variable and can still be used to invoke methods."
+        },
+        {
+          "type": "list",
+          "items": [
+            "In Java, an anonymous object is an object that is created without giving it a name. Anonymous objects are often used to create objects on the fly and pass them as arguments to methods."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation of the Example"
+        },
+        {
+          "type": "text",
+          "text": "In the second example, the object is created without assigning it to any reference variable. The new A().show(); statement creates the object of class A, immediately calls its show() method, and then the object becomes eligible for garbage collection once the method execution is complete."
+        },
+        {
+          "type": "text",
+          "text": "This type of object is useful when you need to create an object for one-time use, where retaining the object reference isn't necessary. Advantages of Using Anonymous Objects Memory Efficiency: Since no reference is stored in the stack, anonymous objects save memory. Cleaner Code: Ideal for situations where the object is only used once, resulting in less clutter in the code. Disadvantages of Using Anonymous Objects No Reusability: Since the object has no reference, it can't be reused in the program. Immediate Garbage Collection: The object is eligible for garbage collection right after its usage, which may not be desirable in some cases."
+        }
+      ],
+      "pages": "139-141"
+    }
+  ]
+}

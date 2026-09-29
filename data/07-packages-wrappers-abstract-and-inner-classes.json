@@ -1,0 +1,395 @@
+{
+  "topics": [
+    {
+      "id": "wrapper-classes",
+      "title": "Wrapper Classes",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Introduction When discussing Java and Object-Oriented Programming (OOP), it's important to note that Java is not a purely object-oriented language. This is because it uses primitive data types such as int for integers, double or float for decimal values, and char for characters. These primitive data types are not objects, which contrasts with the OOP principle that everything should be an object.",
+            "Why Java is Not Purely Object-Oriented In a purely object-oriented language, all entities, including data types, must be represented as objects. However, in Java, primitive data types do not follow this principle, which is why Java is considered a partially object-oriented language.",
+            "Wrapper Classes in Java To bridge the gap between primitive types and the object-oriented nature of Java, the language provides Wrapper Classes. A Wrapper class in Java is a class whose object wraps or contains a primitive data type. When we create an object of a wrapper class, it encapsulates the primitive data type inside it. This allows the primitive data to be used in contexts that require objects.",
+            "Primitive Data Types and Their Corresponding Wrapper Classes For every primitive data type in Java, there is a corresponding wrapper class: Primitive Data Type Wrapper Class char Character byte Byte Primitive Data Type Wrapper Class short Short int Integer long Long float Float double Double boolean Boolean",
+            "Examples and Scenarios Scenario 1: Primitive to Wrapper Type In this scenario, we convert a primitive type to its corresponding wrapper type. Note: The use of new Integer(8) is deprecated in recent versions of Java. Instead, you should rely on autoboxing, where the conversion from a primitive type to a wrapper class is done automatically.",
+            "Scenario 2: Autoboxing and Unboxing Autoboxing: The automatic conversion of a primitive type to the object of its corresponding wrapper class. Unboxing: The reverse process, where the object of a wrapper class is automatically converted back to its corresponding primitive type. Scenario 3: String to int Conversion This scenario demonstrates how to convert a String to an int using a wrapper class method.",
+            "Advantages of Wrapper Classes Collections Framework: Collections in Java can only hold objects, not primitive types. Wrapper classes enable the use of primitive data in collections like ArrayList, HashSet, etc. Method Operations: Wrapper classes provide useful methods like compareTo(), equals(), and toString(). Cloning: Only objects can be cloned in Java, not primitives. Null Values: Wrapper objects can be null, while primitives cannot. Serialization: Serialization, the process of converting an object into a byte stream, only works with objects.",
+            "FAQs on Wrapper Classes Which are the wrapper classes in Java? Wrapper classes in Java are classes whose objects encapsulate primitive data types."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Why use the wrapper class in Java?"
+        },
+        {
+          "type": "text",
+          "text": "Wrapper classes are used to convert primitive data types into objects, which is necessary when you want to modify arguments passed into a method or store primitives in collections. What are the 8 wrapper classes in Java?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The 8 wrapper classes in Java are Boolean, Byte, Short, Character, Integer, Long, Float, and Double."
+          ]
+        }
+      ],
+      "pages": "194-197"
+    },
+    {
+      "id": "anonymous-inner-class",
+      "title": "Anonymous Inner Class",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Definition"
+        },
+        {
+          "type": "text",
+          "text": "In Java, an anonymous inner class is a type of inner class without a name. It is used to create an object with certain modifications or behaviours without explicitly declaring a subclass. This feature is commonly used when you need a one-time use implementation for a class or an interface."
+        },
+        {
+          "type": "heading",
+          "text": "Key Points"
+        },
+        {
+          "type": "text",
+          "text": "Anonymous means without a name. Anonymous inner classes are created without naming the class. They are typically used to extend a class or implement an interface."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax"
+        },
+        {
+          "type": "text",
+          "text": "The syntax for creating an anonymous inner class involves the following:"
+        },
+        {
+          "type": "heading",
+          "text": "Example 1: Without Anonymous Inner Class"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "In this example, we have a class A with a method show(). Class B extends A and overrides the show() method. The object obj is created for class B, which results in the overridden method show() being called. This works but requires creating a separate class (B) even if it's only used once."
+        },
+        {
+          "type": "heading",
+          "text": "Example 2: Using Anonymous Inner Class"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "text",
+          "text": "Instead of creating a separate subclass like B, we use an anonymous inner class. The curly braces {} after new A() define the anonymous inner class, where we override the show() method. This creates a class without a name, allowing a one-time customization of A."
+        },
+        {
+          "type": "heading",
+          "text": "Advantages of Anonymous Inner Classes"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Encapsulation: Keeps implementation details close to where they are used, improving code organization.",
+            "Access Control: Can access private members of the outer class, even if they are private.",
+            "Code Optimization: Avoids the need to create a separate class, reducing boilerplate code.",
+            "Polymorphism: Provides a dynamic way to override methods at runtime.",
+            "Reduced Code Complexity: Simplifies the code when you need minor changes to a class or interface just once."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "When to Use"
+        },
+        {
+          "type": "text",
+          "text": "When you need to override methods of a class or interface just once. When a specific implementation is required without creating a new, named class."
+        },
+        {
+          "type": "heading",
+          "text": "Key Features of Anonymous Inner Class"
+        },
+        {
+          "type": "text",
+          "text": "No name: It is defined without any class name. Single Use: It’s typically used for one-time code modifications. Extends or Implements: You can extend a class or implement an interface on the fly."
+        }
+      ],
+      "pages": "198-200"
+    },
+    {
+      "id": "abstract-keyword",
+      "title": "Abstract Keyword",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "10.1 Abstract Keyword"
+        },
+        {
+          "type": "heading",
+          "text": "Introduction"
+        },
+        {
+          "type": "text",
+          "text": "In Java, the abstract keyword is a non-access modifier used with classes and methods (but not variables) to achieve abstraction, one of the four pillars of Object-Oriented Programming (OOP). Abstraction allows us to define a template or blueprint without requiring a full implementation."
+        },
+        {
+          "type": "text",
+          "text": "It’s mainly used to hide the complex implementation details and show only the essential features of an object. Abstract Methods in Java Sometimes, you may only want to declare a method in a superclass without providing its implementation. This can be achieved using the abstract keyword. Such methods are often referred to as subclass responsibilities, as the subclass must provide their implementation. The superclass only specifies that the method exists but does not define its behaviour."
+        },
+        {
+          "type": "heading",
+          "text": "To declare an abstract method, use the following syntax"
+        },
+        {
+          "type": "heading",
+          "text": "Key Characteristics"
+        },
+        {
+          "type": "text",
+          "text": "Abstract methods have no body; they only include the method signature, followed by a semicolon. A subclass that extends an abstract class must override and provide the implementation for all abstract methods; otherwise, the subclass will also be abstract."
+        },
+        {
+          "type": "text",
+          "text": "Abstract Classes in Java An abstract class is a class that may contain abstract methods (methods without implementation) as well as concrete methods (methods with implementation). You cannot instantiate an abstract class directly; it serves as a blueprint for other classes."
+        },
+        {
+          "type": "heading",
+          "text": "To declare an abstract class, you use the abstract keyword"
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "heading",
+          "text": "Characteristics of the Abstract Keyword"
+        },
+        {
+          "type": "text",
+          "text": "The abstract keyword in Java is mainly used to define abstract classes and methods. Here are some key characteristics"
+        },
+        {
+          "type": "text",
+          "text": "Cannot Instantiate Abstract Classes: You cannot create an object of an abstract class. The abstract class is meant to be extended by concrete (non-abstract) classes, which implement the abstract methods. Abstract Methods Lack Implementation: Abstract methods only provide a method signature and no implementation. The subclasses are responsible for defining these methods."
+        },
+        {
+          "type": "text",
+          "text": "Abstract Classes Can Have Both Abstract and Concrete Methods: Abstract classes may include concrete methods (methods with bodies) alongside abstract ones."
+        },
+        {
+          "type": "text",
+          "text": "Abstract Classes Can Have Constructors: Though you cannot instantiate abstract classes, they can still have constructors. These constructors are used by subclasses to initialize the inherited fields. Can Contain Instance Variables: Abstract classes can include instance variables, which can be accessed by both the abstract class and its subclasses."
+        },
+        {
+          "type": "text",
+          "text": "Can Implement Interfaces: Abstract classes can implement interfaces and must provide implementations for all interface methods unless the class itself is abstract."
+        },
+        {
+          "type": "text",
+          "text": "Real-World Example Let's consider a scenario where we want to create a blueprint for different types of cars:"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Summary"
+        },
+        {
+          "type": "heading",
+          "text": "Here are the key takeaways regarding the abstract keyword in Java"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Abstract Classes Cannot Be Instantiated: You cannot create an object of an abstract class directly.",
+            "Abstract Methods: These methods are declared but not defined; they must be implemented in subclasses.",
+            "Abstract Class Requirement: If a class contains at least one abstract method, the class itself must be declared abstract.",
+            "Concrete Methods in Abstract Classes: An abstract class can contain both abstract and concrete methods.",
+            "Abstract Class Constructors: Abstract classes can have constructors, but they are only used by subclasses."
+          ]
+        }
+      ],
+      "pages": "201-204"
+    },
+    {
+      "id": "inner-class",
+      "title": "Inner Class",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Introduction In Java, an inner class refers to a class that is declared inside another class. Inner classes were primarily introduced to group logically related classes together, reflecting the object-oriented nature of Java and its attempt to mirror real-world relationships.",
+            "Syntax of Inner Class"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "The general syntax for defining an inner class is as follows"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Advantages of Inner Classes"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Using inner classes has several advantages"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Encapsulation: It allows better encapsulation of the code, especially when the inner class is logically dependent on the outer class.",
+            "Access to Outer Class Members: Inner classes can access the private members (fields and methods) of the outer class, providing an added dimension to the class design.",
+            "Cleaner Code: It leads to more modular, readable, and optimized code.",
+            "Example: Basic Inner Class"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "heading",
+          "text": "In this example"
+        },
+        {
+          "type": "list",
+          "items": [
+            "We have two classes, A (outer class) and B (inner class).",
+            "Class A has a method show(), and class B has a method config().",
+            "To create an object of the inner class B, we first need to create an object of the outer class A. This is because the inner class is dependent on the outer class."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Code Explanation"
+        },
+        {
+          "type": "text",
+          "text": "Here, A.B indicates that B is an inner class of A, and obj.new B() uses the object obj of A to create an instance of B. After executing we get two class files one of class A and the other Other of class B. Here, B class file is created with the name A$B where $ represents B class is inner class and it belongs to class A."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Inner Class Dependency An inner class is usually tightly coupled with the outer class. Without the outer class, the inner class often makes no sense. In the example above, class B depends on class A for its existence.",
+            "Static Inner Class Inner classes can also be marked as static. A static inner class is independent of the outer class and can be accessed without creating an object of the outer class.",
+            "Example: Static Inner Class"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Key Points for Static Inner Class"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Independent of the Outer Class: A static inner class can be instantiated without an object of the outer class.",
+            "Static Context: The static inner class behaves like a regular class and cannot access the non-static members of the outer class directly.",
+            "Rules for Inner and Outer Classes",
+            "Static Modifier: Only inner classes can be marked as static. Outer classes cannot be declared as static, and any attempt to do so will result in a compile-time error.",
+            "Allowed Modifiers for Outer Class: The valid access modifiers for an outer class are public, final, and abstract.",
+            "Summary",
+            "Inner classes are declared within another class.",
+            "An inner class can access private members of its outer class.",
+            "To instantiate an inner class, an object of the outer class is required.",
+            "A static inner class can be instantiated without creating an object of the outer class.",
+            "Static modifier applies only to inner classes, not outer classes."
+          ]
+        }
+      ],
+      "pages": "205-209"
+    },
+    {
+      "id": "abstract-class-and-anonymous-inner-class",
+      "title": "Abstract Class and Anonymous Inner Class",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Introduction"
+        },
+        {
+          "type": "text",
+          "text": "In Java, an anonymous inner class allows you to create an instance of a class with new behaviour without having to explicitly define a subclass. This is particularly useful when you need to modify or extend the functionality of an existing class only once, saving the effort of defining a new class."
+        },
+        {
+          "type": "text",
+          "text": "On the other hand, an abstract class is a class marked with the abstract keyword, which means"
+        },
+        {
+          "type": "text",
+          "text": "It may contain both abstract methods (without implementations) and concrete methods (with implementations). You cannot create an object of an abstract class directly. But can we combine the use of abstract classes with anonymous inner classes? The answer is yes! Let’s explore this combination with an example."
+        },
+        {
+          "type": "heading",
+          "text": "Example: Combining Abstract Class and Anonymous Inner Class"
+        },
+        {
+          "type": "heading",
+          "text": "Output"
+        },
+        {
+          "type": "heading",
+          "text": "Explanation"
+        },
+        {
+          "type": "heading",
+          "text": "In this example"
+        },
+        {
+          "type": "text",
+          "text": "A is an abstract class that contains an abstract method show(). Even though you cannot create an object of A directly because it is abstract, we are able to provide an implementation of the show() method using an anonymous inner class. The anonymous inner class gives us the ability to override the abstract method and provide a new implementation."
+        },
+        {
+          "type": "heading",
+          "text": "This demonstrates that"
+        },
+        {
+          "type": "text",
+          "text": "Anonymous inner classes can implement abstract methods, even for abstract classes. You can combine both concepts to dynamically implement abstract methods without having to define a separate subclass. Additionally, this approach works for multiple abstract methods in an abstract class, allowing you to implement several methods within an anonymous inner class."
+        },
+        {
+          "type": "heading",
+          "text": "Key Points to Remember"
+        },
+        {
+          "type": "text",
+          "text": "Abstract classes can’t be instantiated directly, but anonymous inner classes allow you to create an instance that implements abstract methods. This combination is particularly useful when you need a one-time implementation of an abstract class without creating a named subclass."
+        },
+        {
+          "type": "text",
+          "text": "The implementation of abstract methods inside an anonymous inner class is done inline and is not reusable elsewhere, making it ideal for short, specific tasks."
+        }
+      ],
+      "pages": "210-211"
+    }
+  ]
+}

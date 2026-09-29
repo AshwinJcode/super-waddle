@@ -1,0 +1,364 @@
+{
+  "topics": [
+    {
+      "id": "need-for-loops",
+      "title": "Need For Loops",
+      "summary": "",
+      "code": {
+        "filename": "NeedForLoops.java",
+        "language": "java",
+        "text": "System.out.println(1);\nSystem.out.println(2);\nSystem.out.println(3);\nSystem.out.println(4);\nSystem.out.println(5);\nfor (int i = 1; i <= 5; i++) {\nSystem.out.println(i);\n}\nfor (int i = 0; i < 10; i++) {\nSystem.out.println(i);\n}\nint i = 0;\ndo {\nSystem.out.println(i);\ni++;\n} while (i < 10);"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Need For Loops. Loops, also known as iterative statements, are crucial in programming for executing a block of code repetitively. They allow for the repeated execution of a set of instructions or a code block as long as a specified condition is met. Loops are fundamental to the concept of iteration, enhancing code efficiency, readability, and promoting the reuse of code logic."
+        },
+        {
+          "type": "heading",
+          "text": "Example: Iterative Statements Without and With Loops"
+        },
+        {
+          "type": "text",
+          "text": "Without Loops: Consider a scenario where you want to print numbers from 1 to 5. Without using loops, you would need to write multiple lines of code"
+        },
+        {
+          "type": "text",
+          "text": "System.out.println(1); System.out.println(2); System.out.println(3); System.out.println(4); System.out.println(5); This approach is verbose and not scalable."
+        },
+        {
+          "type": "text",
+          "text": "With Loops: The same task can be accomplished using a loop, which is more compact and efficient: for (int i = 1; i <= 5; i++) { System.out.println(i); } This loop iterates from 1 to 5, printing each number, demonstrating the power of loops in reducing code complexity. Types of Loops Loops can be categorized based on the control mechanism into two main types: entry-controlled loops and exit-controlled loops."
+        },
+        {
+          "type": "heading",
+          "text": "1. Entry-Controlled Loops"
+        },
+        {
+          "type": "text",
+          "text": "The test condition is checked before entering the main body of the loop."
+        },
+        {
+          "type": "text",
+          "text": "Examples: for loop, while loop."
+        },
+        {
+          "type": "heading",
+          "text": "Example of an Entry-Controlled Loop"
+        },
+        {
+          "type": "text",
+          "text": "for (int i = 0; i < 10; i++) { System.out.println(i); } In this example, the condition i < 10 is checked before executing the loop body."
+        },
+        {
+          "type": "heading",
+          "text": "2. Exit-Controlled Loops"
+        },
+        {
+          "type": "text",
+          "text": "The test condition is evaluated at the end of the loop body, ensuring that the loop body will execute at least once, regardless of whether the condition is true or false."
+        },
+        {
+          "type": "text",
+          "text": "Example: do-while loop."
+        },
+        {
+          "type": "heading",
+          "text": "Example of an Exit-Controlled Loop"
+        },
+        {
+          "type": "text",
+          "text": "int i = 0; do { System.out.println(i); i++; } while (i < 10); In this example, the do-while loop executes the loop body first and then checks the condition i < 10."
+        }
+      ],
+      "pages": "38-39"
+    },
+    {
+      "id": "while-loop",
+      "title": "While Loop",
+      "summary": "",
+      "code": {
+        "filename": "WhileLoop.java",
+        "language": "java",
+        "text": "while (condition) {\n// code block to be executed\n}\nint i = 0; // Initialize counter variable\nwhile (i < 4) { // Loop continues while i is less than 4\nSystem.out.println(\"Hi\");\n}\nint i = 0; // Outer loop counter\nwhile (i < 4) {\nSystem.out.println(\"Hi\");\nint j = 0; // Inner loop counter\nwhile (j < 3) {\nSystem.out.println(\"Hello \" + (j + 1)); // Preceding with the number of times printed\n}\n}"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "While Loop A while loop is an entry-controlled control flow structure in programming that repeatedly executes a block of code as long as a specified condition remains true. The loop continues to iterate while the condition is true and terminates once the condition evaluates to false."
+        },
+        {
+          "type": "heading",
+          "text": "Basic Syntax of While Loop"
+        },
+        {
+          "type": "text",
+          "text": "while (condition) { // code block to be executed } In this structure, the condition is checked before each iteration. If the condition evaluates to true, the loop body (code block) is executed. If the condition evaluates to false, the loop terminates."
+        },
+        {
+          "type": "heading",
+          "text": "Example: Printing \"Hi\" Multiple Times"
+        },
+        {
+          "type": "text",
+          "text": "To print \"Hi\" four times using a while loop, you can use a counter variable that increments with each iteration. This counter helps control the number of times the loop executes, preventing infinite loops."
+        },
+        {
+          "type": "heading",
+          "text": "Example Code"
+        },
+        {
+          "type": "command",
+          "text": "int i = 0; // Initialize counter variable while (i < 4) { // Loop continues while i is less than 4 System.out.println(\"Hi\"); i++; // Increment counter }"
+        },
+        {
+          "type": "heading",
+          "text": "In this example"
+        },
+        {
+          "type": "text",
+          "text": " The counter variable i is initialized to 0.  The condition i < 4 ensures the loop runs only four times.  The System.out.println(\"Hi\"); statement prints \"Hi\" during each iteration.  The counter i increments by 1 after each iteration, eventually making the condition false and terminating the loop."
+        },
+        {
+          "type": "text",
+          "text": "Nested While Loops: Printing \"Hello\" After \"Hi\" To print \"Hello\" three times after each \"Hi\", you can use nested while loops. A nested loop runs inside another loop, with the inner loop completing all its iterations before the outer loop proceeds to the next iteration."
+        },
+        {
+          "type": "heading",
+          "text": "Example Code with Explanation"
+        },
+        {
+          "type": "text",
+          "text": "int i = 0; // Outer loop counter while (i < 4) { System.out.println(\"Hi\"); int j = 0; // Inner loop counter while (j < 3) { System.out.println(\"Hello \" + (j + 1)); // Preceding with the number of times printed j++; // Increment inner loop counter } i++; // Increment outer loop counter }"
+        },
+        {
+          "type": "heading",
+          "text": "In this example"
+        },
+        {
+          "type": "text",
+          "text": " The outer loop (controlled by i) prints \"Hi\" four times.  For each iteration of the outer loop, the inner loop (controlled by j) prints \"Hello\" three times, preceded by the number indicating the print count."
+        }
+      ],
+      "pages": "40-42"
+    },
+    {
+      "id": "do-while-loop",
+      "title": "Do While Loop",
+      "summary": "",
+      "code": {
+        "filename": "DoWhileLoop.java",
+        "language": "java",
+        "text": "do {\n// code block to be executed\n} while (condition);\npublic class Main {\npublic static void main(String[] args) {\nint i = 1;\ndo {\nSystem.out.println(i);\ni++;\n} while (i <= 4);\n}\n}"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A do-while loop is an exit-controlled control flow structure in programming. It ensures that a block of code is executed at least once and then continues to execute the block as long as a specified condition remains true."
+        },
+        {
+          "type": "text",
+          "text": "The key feature of a do-while loop is that the condition is evaluated after the code block, guaranteeing at least one execution, even if the condition is initially false."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax of Do-While Loop"
+        },
+        {
+          "type": "text",
+          "text": "do { // code block to be executed } while (condition); In this structure, the code block inside the do section is executed first. After execution, the condition in the while statement is evaluated. If the condition evaluates to true, the loop iterates again; if false, the loop terminates."
+        },
+        {
+          "type": "heading",
+          "text": "Example: Do-While Loop Usage"
+        },
+        {
+          "type": "text",
+          "text": "Let's illustrate this with an example where we want to ensure that a message is printed at least once, regardless of the condition."
+        },
+        {
+          "type": "heading",
+          "text": "Example Code"
+        },
+        {
+          "type": "command",
+          "text": "public class Main { public static void main(String[] args) { int i = 1; do { System.out.println(i); i++; } while (i <= 4); } }"
+        },
+        {
+          "type": "heading",
+          "text": "In this example"
+        },
+        {
+          "type": "text",
+          "text": " The variable i is initialized to 1.  The do block contains the code to print the value of i and increment it by 1.  The loop continues to run while i <= 4. As a result, numbers from 1 to 4 are printed.  Even if i was initially greater than 4, the message would still print once because the condition is checked after the code block execution."
+        },
+        {
+          "type": "text",
+          "text": "Differences Between While and Do-While Loops  Execution Guarantee: The do-while loop guarantees that the code block is executed at least once, even if the condition is false from the beginning. In contrast, a while loop checks the condition before execution and may not run at all if the condition is false initially.  Condition Check: In a while loop, the condition is checked before the loop body; in a do- while loop, the condition is checked after the loop body."
+        }
+      ],
+      "pages": "43-44"
+    },
+    {
+      "id": "for-loop",
+      "title": "For Loop",
+      "summary": "",
+      "code": {
+        "filename": "ForLoop.java",
+        "language": "java",
+        "text": "for (initialization; condition; update) {\n// code block to be executed\n}\npublic class Hello {\npublic static void main(String[] args) {\n// Example 1: Printing \"Hi\" with indices\nfor (int i = 0; i <= 4; i++) {\nSystem.out.println(\"Hi \" + i);\n}\n// Example 2: Nested for loops to display days and working hours\nfor (int i = 1; i <= 7; i++) {\nSystem.out.println(\"Day \" + i);\nfor (int j = 1; j <= 9; j++) {\nSystem.out.println(\" \" + (j + 8) + \" - \" + (j + 9));\n}\n}\n// Example 3: For loop with initialization outside the loop\nint i = 1;\nfor (; i <= 5;) {\nSystem.out.println(\"DAY \" + i);\ni++;\n}\n}\n}"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A for loop is a control flow structure in programming that iterates over a sequence of elements, such as a range of numbers, items in a list, or characters in a string. It is an entry- controlled loop, meaning it determines the number of iterations before entering the loop."
+        },
+        {
+          "type": "text",
+          "text": "The for loop provides a concise way of writing the loop control structure in a single line, unlike other loops where initialization, condition, and increment/decrement steps are specified separately."
+        },
+        {
+          "type": "heading",
+          "text": "Syntax of For Loop"
+        },
+        {
+          "type": "command",
+          "text": "for (initialization; condition; update) { // code block to be executed }"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Initialization: This step sets the starting value of the loop control variable.",
+            "Condition: This is the test condition that must be true for the loop to continue executing.",
+            "Update: This modifies the loop control variable after each iteration."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Example and Output"
+        },
+        {
+          "type": "heading",
+          "text": "Code Example"
+        },
+        {
+          "type": "text",
+          "text": "public class Hello { public static void main(String[] args) { // Example 1: Printing \"Hi\" with indices for (int i = 0; i <= 4; i++) { System.out.println(\"Hi \" + i); } // Example 2: Nested for loops to display days and working hours for (int i = 1; i <= 7; i++) { System.out.println(\"Day \" + i); for (int j = 1; j <= 9; j++) { System.out.println(\" \" + (j + 8) + \" - \" + (j + 9)); } } // Example 3: For loop with initialization outside the loop int i = 1; for (; i <= 5;) { System.out.println(\"DAY \" + i);"
+        },
+        {
+          "type": "command",
+          "text": "i++; } } }"
+        }
+      ],
+      "pages": "45-48"
+    },
+    {
+      "id": "which-loop-to-use",
+      "title": "Which Loop to Use",
+      "summary": "",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Recommended Loops to Use in Programs In Java, there are three primary loops that we use to perform iterations:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "while loop",
+            "do-while loop",
+            "for loop Each of these loops is useful in different scenarios, depending on the conditions and requirements of the task at hand. While all loops perform iterations, the choice of which loop to use depends on the specific situation. Let’s break it down"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "1. for Loop"
+        },
+        {
+          "type": "heading",
+          "text": "When to use"
+        },
+        {
+          "type": "text",
+          "text": "A for loop is ideal when you know the exact number of iterations in advance. It combines the initialization, condition checking, and increment/decrement in one statement, making it concise and clear."
+        },
+        {
+          "type": "heading",
+          "text": "Common usage"
+        },
+        {
+          "type": "text",
+          "text": "For tasks like counting, iterating over arrays or lists, or performing a set number of iterations, the for loop is highly recommended."
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "2. while Loop"
+        },
+        {
+          "type": "heading",
+          "text": "When to use"
+        },
+        {
+          "type": "text",
+          "text": "A while loop is preferred when you don’t know in advance how many iterations are needed, but the condition will determine when the loop should terminate. This is common in scenarios like reading from a file, where the number of iterations depends on external factors (e.g., the content of the file)."
+        },
+        {
+          "type": "heading",
+          "text": "Analogy"
+        },
+        {
+          "type": "text",
+          "text": "Think of it as \"As long as\" – as long as the condition holds true, the loop will keep running."
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "3. do-while Loop"
+        },
+        {
+          "type": "heading",
+          "text": "When to use"
+        },
+        {
+          "type": "text",
+          "text": "A do-while loop is useful when you need to execute the loop at least once, even if the condition is initially false. This is because the condition is checked after the first iteration."
+        },
+        {
+          "type": "heading",
+          "text": "Example"
+        },
+        {
+          "type": "text",
+          "text": "Choosing the Right Loop"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Use a for loop when you know the exact number of iterations.",
+            "Use a while loop when the number of iterations is unknown and depends on a condition being met (e.g., reading a file or fetching data from a database).",
+            "Use a do-while loop when you want the loop to run at least once, regardless of the condition. Real-World Usage",
+            "In enterprise-level applications, while loops are often used for tasks like fetching data from a database, reading files, or processing user input."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "These tasks usually require loops that continue until a condition (e.g., end of file or no more data) is met."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Although all loops perform the same function (i.e., iteration), choosing the right loop enhances code readability and efficiency. In practice, for loops are commonly used when the number of iterations is clear, while while loops are favored for data-driven operations."
+          ]
+        }
+      ],
+      "pages": "49-52"
+    }
+  ]
+}
